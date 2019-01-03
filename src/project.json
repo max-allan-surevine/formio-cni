@@ -1,0 +1,3033 @@
+{
+  "title": "CNI Application",
+  "description": "CNI form",
+  "version": "2.0.0",
+  "name": "cni",
+  "preview": {
+    "url": "https://formio.github.io/formio-app-todo/dist",
+    "repo": "https://github.com/formio/formio-app-todo"
+  },
+  "roles": {
+    "administrator": {
+      "title": "Administrator",
+      "description": "A role for Administrative Users.",
+      "admin": true,
+      "default": false
+    },
+    "authenticated": {
+      "title": "Authenticated",
+      "description": "A role for Authenticated Users.",
+      "admin": false,
+      "default": false
+    },
+    "anonymous": {
+      "title": "Anonymous",
+      "description": "A role for Anonymous Users.",
+      "admin": false,
+      "default": true
+    }
+  },
+  "forms": {
+    "userRegister": {
+      "title": "User Register",
+      "type": "form",
+      "name": "userRegister",
+      "path": "user/register",
+      "components": [
+        {
+          "lockKey": true,
+          "type": "textfield",
+          "validate": {
+            "customPrivate": false,
+            "custom": "",
+            "pattern": "",
+            "maxLength": "",
+            "minLength": "",
+            "required": true
+          },
+          "persistent": true,
+          "unique": false,
+          "protected": false,
+          "defaultValue": "",
+          "multiple": false,
+          "suffix": "",
+          "prefix": "",
+          "placeholder": "Enter your full name",
+          "key": "fullName",
+          "label": "User Full Name",
+          "inputMask": "",
+          "inputType": "text",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "validate": {
+            "required": true
+          },
+          "input": true,
+          "tableView": true,
+          "inputType": "email",
+          "label": "Email",
+          "lockKey": true,
+          "key": "email",
+          "placeholder": "Enter your email address",
+          "prefix": "",
+          "suffix": "",
+          "defaultValue": "",
+          "protected": false,
+          "unique": false,
+          "persistent": true,
+          "type": "email"
+        },
+        {
+          "validate": {
+            "required": true
+          },
+          "input": true,
+          "tableView": false,
+          "inputType": "password",
+          "label": "Password",
+          "lockKey": true,
+          "key": "password",
+          "placeholder": "Enter your password.",
+          "prefix": "",
+          "suffix": "",
+          "protected": true,
+          "persistent": true,
+          "type": "password"
+        },
+        {
+          "input": true,
+          "tableView": false,
+          "inputType": "password",
+          "label": "Verify Password",
+          "key": "verifyPassword",
+          "placeholder": "Verify your password",
+          "prefix": "",
+          "suffix": "",
+          "protected": true,
+          "persistent": false,
+          "type": "password",
+          "validate": {
+            "required": true,
+            "custom": "valid = (input == '{{ password }}') ? true : 'Passwords must match.';"
+          }
+        },
+        {
+          "tableView": false,
+          "type": "button",
+          "input": true,
+          "label": "Submit",
+          "key": "submit",
+          "size": "md",
+          "leftIcon": "",
+          "rightIcon": "",
+          "block": false,
+          "action": "submit",
+          "disableOnInvalid": true,
+          "theme": "primary"
+        }
+      ],
+      "access": [
+        {
+          "type": "read_all",
+          "roles": [
+            "anonymous"
+          ]
+        }
+      ],
+      "submissionAccess": [
+        {
+          "type": "create_own",
+          "roles": [
+            "anonymous"
+          ]
+        }
+      ]
+    },
+    "userLogin": {
+      "title": "User Login",
+      "type": "form",
+      "name": "userLogin",
+      "path": "user/login",
+      "components": [
+        {
+          "type": "email",
+          "persistent": true,
+          "unique": false,
+          "protected": false,
+          "defaultValue": "",
+          "suffix": "",
+          "prefix": "",
+          "placeholder": "Enter your email address",
+          "key": "email",
+          "lockKey": true,
+          "label": "Email",
+          "inputType": "email",
+          "tableView": true,
+          "input": true,
+          "validate": {
+            "required": true
+          }
+        },
+        {
+          "type": "password",
+          "persistent": true,
+          "protected": true,
+          "suffix": "",
+          "prefix": "",
+          "placeholder": "Enter your password.",
+          "key": "password",
+          "lockKey": true,
+          "label": "Password",
+          "inputType": "password",
+          "tableView": false,
+          "input": true,
+          "validate": {
+            "required": true
+          }
+        },
+        {
+          "type": "button",
+          "theme": "primary",
+          "disableOnInvalid": true,
+          "action": "submit",
+          "block": false,
+          "rightIcon": "",
+          "leftIcon": "",
+          "size": "md",
+          "key": "submit",
+          "tableView": false,
+          "label": "Submit",
+          "input": true
+        }
+      ],
+      "access": [
+        {
+          "type": "read_all",
+          "roles": [
+            "anonymous"
+          ]
+        }
+      ],
+      "submissionAccess": [
+        {
+          "type": "create_own",
+          "roles": [
+            "anonymous"
+          ]
+        }
+      ]
+    },
+"cniSupplier": {
+  "type": "form",
+  "tags": ["common"],
+  "deleted": null,
+  "owner": null,
+  "components": [{
+    "key": "content",
+    "label": "Content",
+    "input": false,
+    "tag": "p",
+    "attrs": [{
+      "value": "",
+      "attr": ""
+    }],
+    "className": "",
+    "content": "<div style=\"font-size: 18px\">\n<p>Lead Contact - User details (this must be the individual completing this form)</p>\n<ul>\n<li>Name</li>\n<li>Email</li>\n<li>Role</li>\n</ul>\n</div>",
+    "type": "htmlelement",
+    "hideLabel": true,
+    "tags": [],
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "properties": {},
+    "customClass": "title"
+  }, {
+    "clearOnHide": false,
+    "key": "panel",
+    "input": false,
+    "title": "Organisation Details",
+    "theme": "default",
+    "tableView": false,
+    "components": [{
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "inputType": "text",
+      "inputMask": "",
+      "label": "Name",
+      "key": "panelOrganisationName",
+      "placeholder": "",
+      "prefix": "",
+      "suffix": "",
+      "multiple": false,
+      "defaultValue": "",
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "spellcheck": true,
+      "validate": {
+        "required": true,
+        "minLength": "",
+        "maxLength": "",
+        "pattern": "",
+        "custom": "",
+        "customPrivate": false,
+        "customMessage": "This is a required field"
+      },
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "type": "textfield",
+      "labelPosition": "top",
+      "tags": [],
+      "properties": {}
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "label": "Address",
+      "key": "panelAddress2",
+      "placeholder": "",
+      "prefix": "",
+      "suffix": "",
+      "rows": 3,
+      "multiple": false,
+      "defaultValue": "",
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "wysiwyg": false,
+      "clearOnHide": true,
+      "spellcheck": true,
+      "validate": {
+        "required": true,
+        "minLength": "",
+        "maxLength": "",
+        "pattern": "",
+        "custom": ""
+      },
+      "type": "textarea",
+      "labelPosition": "top",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {}
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "inputType": "tel",
+      "inputMask": "",
+      "label": "Telephone number",
+      "key": "panelTelephonenumber",
+      "placeholder": "",
+      "prefix": "",
+      "suffix": "",
+      "multiple": false,
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "hidden": false,
+      "defaultValue": "",
+      "clearOnHide": true,
+      "validate": {
+        "required": true
+      },
+      "type": "phoneNumber",
+      "labelPosition": "top",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {},
+      "errorLabel": "Organisation phone number"
+    }],
+    "type": "panel",
+    "breadcrumb": "default",
+    "hideLabel": true,
+    "tags": [],
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "properties": {},
+    "label": "panel"
+  }, {
+    "clearOnHide": false,
+    "key": "panel2",
+    "input": false,
+    "title": "Organisation information",
+    "theme": "default",
+    "tableView": false,
+    "components": [{
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "label": "Organisation overview",
+      "key": "panel2Organisationoverview",
+      "placeholder": "",
+      "prefix": "",
+      "suffix": "",
+      "rows": 3,
+      "multiple": false,
+      "defaultValue": "",
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "wysiwyg": false,
+      "clearOnHide": true,
+      "spellcheck": true,
+      "validate": {
+        "required": true,
+        "minLength": "",
+        "maxLength": "",
+        "pattern": "",
+        "custom": "",
+        "customMessage": "This field is needed to populate your entry in the directory"
+      },
+      "type": "textarea",
+      "labelPosition": "top",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {}
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "inputType": "text",
+      "inputMask": "",
+      "label": "Website link",
+      "key": "panel2Websiteaddress",
+      "placeholder": "",
+      "prefix": "",
+      "suffix": "",
+      "multiple": false,
+      "defaultValue": "",
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "spellcheck": true,
+      "validate": {
+        "required": true,
+        "minLength": "",
+        "maxLength": "",
+        "pattern": "",
+        "custom": "",
+        "customPrivate": false,
+        "customMessage": "This field lets users get to your organisation's website to establish who you are"
+      },
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "type": "textfield",
+      "labelPosition": "top",
+      "tags": [],
+      "properties": {}
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "label": "Organisation Logo (images only, 5MB maximum size)",
+      "key": "panel2Organisationlogo",
+      "image": false,
+      "imageSize": "200",
+      "placeholder": "",
+      "multiple": false,
+      "defaultValue": "",
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "filePattern": "image/*",
+      "fileMinSize": "0KB",
+      "fileMaxSize": "5MB",
+      "type": "file",
+      "labelPosition": "top",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {},
+      "storage": "base64",
+      "validate": {
+        "customMessage": ""
+      }
+    }],
+    "type": "panel",
+    "breadcrumb": "default",
+    "hideLabel": true,
+    "tags": [],
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "properties": {},
+    "label": "panel2"
+  }, {
+    "clearOnHide": false,
+    "key": "panel6",
+    "input": false,
+    "title": "Sector Experience",
+    "theme": "default",
+    "tableView": false,
+    "components": [{
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "label": "What sectors do you work with?",
+      "key": "panel6Whatsectorsdoyouworkwith2",
+      "values": [{
+        "value": "chemicals",
+        "label": "Chemicals",
+        "shortcut": ""
+      }, {
+        "value": "communications",
+        "label": "Communications",
+        "shortcut": ""
+      }, {
+        "value": "civilNuclear",
+        "label": "Civil Nuclear",
+        "shortcut": ""
+      }, {
+        "value": "energy",
+        "label": "Energy",
+        "shortcut": ""
+      }, {
+        "value": "finance",
+        "label": "Finance",
+        "shortcut": ""
+      }, {
+        "value": "food",
+        "label": "Food",
+        "shortcut": ""
+      }, {
+        "value": "space",
+        "label": "Space",
+        "shortcut": ""
+      }, {
+        "value": "transport",
+        "label": "Transport",
+        "shortcut": ""
+      }, {
+        "value": "water",
+        "label": "Water",
+        "shortcut": ""
+      }],
+      "inline": false,
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "validate": {
+        "required": false
+      },
+      "type": "selectboxes",
+      "labelPosition": "top",
+      "optionsLabelPosition": "right",
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      }
+    }, {
+      "key": "panel6Content",
+      "label": "Content",
+      "input": false,
+      "tag": "p",
+      "attrs": [{
+        "value": "",
+        "attr": ""
+      }],
+      "className": "",
+      "content": "<div style=\"font-size: 18px\">\n<p>If you are a member of an existing NCSC assurance scheme, please select the following scheme(s) you are a member of:</p>\n<ul>\n<li>Certified Cyber Security Consultants</li>\n<li>Penetration testing</li>\n<li>Cyber Incidents</li>\n<li>Tailored Evaluation</li>\n</ul>\n</div>",
+      "type": "htmlelement",
+      "hideLabel": true,
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {}
+    }],
+    "type": "panel",
+    "breadcrumb": "default",
+    "tags": [],
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "properties": {},
+    "label": "panel6",
+    "inDataGrid": true,
+    "hideLabel": true
+  }, {
+    "clearOnHide": false,
+    "key": "panel3",
+    "input": false,
+    "title": "Service & Expertise",
+    "theme": "default",
+    "tableView": false,
+    "components": [{
+      "autofocus": false,
+      "input": true,
+      "tree": true,
+      "components": [{
+        "autofocus": false,
+        "input": true,
+        "tableView": true,
+        "label": "A: Managing Security Risk",
+        "key": "panel3DataGridManagingSecurityRisk",
+        "placeholder": "",
+        "data": {
+          "values": [{
+            "value": "a1GovernanceConsultancy",
+            "label": "A1: Governance - Consultancy"
+          }, {
+            "value": "a1GovernanceResearch",
+            "label": "A1: Governance - Research"
+          }, {
+            "value": "a1GovernanceTraining",
+            "label": "A1: Governance - Training"
+          }, {
+            "value": "a2RiskManagementConsultancy",
+            "label": "A2: Risk Management - Consultancy"
+          }, {
+            "value": "a2RiskManagementResearch",
+            "label": "A2: Risk Management - Research"
+          }, {
+            "value": "a2RiskManagementTools",
+            "label": "A2: Risk Management - Tools"
+          }, {
+            "value": "a2RiskManagementTraining",
+            "label": "A2: Risk Management - Training"
+          }, {
+            "value": "a3AssetManagementConsultancy",
+            "label": "A3: Asset Management - Consultancy"
+          }, {
+            "value": "a3AssetManagementResearch",
+            "label": "A3: Asset Management - Research"
+          }, {
+            "value": "a3AssetManagementTools",
+            "label": "A3: Asset Management - Tools"
+          }, {
+            "value": "a3AssetManagementTraining",
+            "label": "A3: Asset Management - Training"
+          }, {
+            "value": "a4SupplyChainConsultancy",
+            "label": "A4: Supply Chain - Consultancy"
+          }, {
+            "value": "a4SupplyChainResearch",
+            "label": "A4: Supply Chain - Research"
+          }, {
+            "value": "a4SupplyChainTools",
+            "label": "A4: Supply Chain - Tools"
+          }, {
+            "value": "a4SupplyChainTraining",
+            "label": "A4: Supply Chain - Training"
+          }],
+          "url": "",
+          "resource": "",
+          "custom": "",
+          "json": [{
+            "label": "Risk assessment",
+            "value": "risk-assessment"
+          }, {
+            "label": "Governance compliance",
+            "value": "governance-compliance"
+          }, {
+            "label": "Regulatory compliance",
+            "value": "regulatory-compliance"
+          }, {
+            "label": "Research",
+            "value": "research"
+          }]
+        },
+        "dataSrc": "values",
+        "valueProperty": "value",
+        "defaultValue": "",
+        "refreshOn": "",
+        "filter": "",
+        "authenticate": false,
+        "template": "<span>{{ item.label }}</span>",
+        "multiple": false,
+        "protected": false,
+        "unique": false,
+        "persistent": true,
+        "hidden": false,
+        "clearOnHide": true,
+        "validate": {
+          "required": false
+        },
+        "type": "select",
+        "inDataGrid": true,
+        "labelPosition": "top",
+        "tags": [],
+        "conditional": {
+          "show": "",
+          "when": null,
+          "eq": ""
+        },
+        "properties": {},
+        "customClass": "fixed-fayt"
+      }],
+      "tableView": true,
+      "label": "A: Managing Security Risk",
+      "key": "panel3DataGrid",
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "type": "datagrid",
+      "addAnotherPosition": "bottom",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {},
+      "hideLabel": true,
+      "validate": {
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "isNew": false
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tree": true,
+      "components": [{
+        "autofocus": false,
+        "input": true,
+        "tableView": true,
+        "label": "B: Protecting Against Cyber Attack",
+        "key": "panel3DataGrid2ProtectingSystemsAgainstCyberAttack",
+        "placeholder": "",
+        "data": {
+          "values": [{
+            "value": "b1ServiceProtectionPoliciesAndProcessesConsultancy",
+            "label": "B1: Service Protection Policies and Processes - Consultancy"
+          }, {
+            "value": "b1ServiceProtectionPoliciesAndProcessesResearch",
+            "label": "B1: Service Protection Policies and Processes - Research"
+          }, {
+            "value": "b1ServiceProtectionPoliciesAndProcessesTraining",
+            "label": "B1: Service Protection Policies and Processes - Training"
+          }, {
+            "value": "b2IdentityAndAccessControlConsultancy",
+            "label": "B2: Identity and Access Control - Consultancy"
+          }, {
+            "value": "b2IdentityAndAccessControlResearch",
+            "label": "B2: Identity and Access Control - Research"
+          }, {
+            "value": "b2IdentityAndAccessControlTools",
+            "label": "B2: Identity and Access Control - Tools"
+          }, {
+            "value": "b2IdentityAndAccessControlTraining",
+            "label": "B2: Identity and Access Control - Training"
+          }, {
+            "value": "b3DataSecurityConsultancy",
+            "label": "B3: Data Security - Consultancy"
+          }, {
+            "value": "b3DataSecurityResearch",
+            "label": "B3: Data Security - Research"
+          }, {
+            "value": "b3DataSecurityTools",
+            "label": "B3: Data Security - Tools"
+          }, {
+            "value": "b3DataSecurityTraining",
+            "label": "B3: Data Security - Training"
+          }, {
+            "value": "b4SystemSecurityConsultancy",
+            "label": "B4: System Security - Consultancy"
+          }, {
+            "value": "b4SystemSecurityResearch",
+            "label": "B4: System Security - Research"
+          }, {
+            "value": "b4SystemSecurityTools",
+            "label": "B4: System Security - Tools"
+          }, {
+            "value": "b4SystemSecurityTraining",
+            "label": "B4: System Security - Training"
+          }, {
+            "value": "b5ResilientNetworksAndSystemsConsultancy",
+            "label": "B5: Resilient Networks and Systems - Consultancy"
+          }, {
+            "value": "b5ResilientNetworksAndSystemsResearch",
+            "label": "B5: Resilient Networks and Systems - Research"
+          }, {
+            "value": "b5ResilientNetworksAndSystemsTools",
+            "label": "B5: Resilient Networks and Systems - Tools"
+          }, {
+            "value": "b5ResilientNetworksAndSystemsTraining",
+            "label": "B5: Resilient Networks and Systems - Training"
+          }, {
+            "value": "b6StaffAwarenessAndTrainingConsultancy",
+            "label": "B6: Staff Awareness and Training - Consultancy"
+          }, {
+            "value": "b6StaffAwarenessAndTrainingFacilities",
+            "label": "B6: Staff Awareness and Training - Facilities"
+          }, {
+            "value": "b6StaffAwarenessAndTrainingResearch",
+            "label": "B6: Staff Awareness and Training - Research"
+          }, {
+            "value": "b6StaffAwarenessAndTrainingTools",
+            "label": "B6: Staff Awareness and Training - Tools"
+          }, {
+            "value": "b6StaffAwarenessAndTrainingTraining",
+            "label": "B6: Staff Awareness and Training - Training"
+          }],
+          "json": [{
+            "label": "Email security",
+            "value": "email-security"
+          }, {
+            "label": "Communications security",
+            "value": "communications-security"
+          }, {
+            "label": "Secure real time communications",
+            "value": "secure-real-time-communications"
+          }, {
+            "label": "Network security",
+            "value": "network-security"
+          }, {
+            "label": "Virtual Private Network",
+            "value": "virtual-private-network"
+          }, {
+            "label": "IPSec security gateway",
+            "value": "ipsec-security-gateway"
+          }, {
+            "label": "Telecommunications",
+            "value": "telecommunications"
+          }, {
+            "label": "Disk encryption",
+            "value": "disk-encryption"
+          }, {
+            "label": "Data encryption",
+            "value": "data-encryption"
+          }, {
+            "label": "Data at rest encryption",
+            "value": "data-at-rest-encryption"
+          }, {
+            "label": "Email encryption",
+            "value": "email-encryption"
+          }, {
+            "label": "PKI Security",
+            "value": "pki-security"
+          }, {
+            "label": "Remote desktop",
+            "value": "remote-desktop"
+          }, {
+            "label": "Mobile device management",
+            "value": "mobile-device-management"
+          }, {
+            "label": "Device security",
+            "value": "device-security"
+          }, {
+            "label": "Sanitisation services",
+            "value": "sanitisation-services"
+          }, {
+            "label": "Sanitisation products",
+            "value": "sanitisation-products"
+          }, {
+            "label": "Public awareness",
+            "value": "public-awareness"
+          }, {
+            "label": "Human factors",
+            "value": "human-factors"
+          }, {
+            "label": "Corporate awareness",
+            "value": "corporate-awareness"
+          }, {
+            "label": "Incident response training",
+            "value": "incident-response-training"
+          }, {
+            "label": "Cyber exercise services",
+            "value": "cyber-exercise-services"
+          }, {
+            "label": "Cyber range exercising",
+            "value": "cyber-range-exercising"
+          }, {
+            "label": "Penetration testing",
+            "value": "penetration-testing"
+          }, {
+            "label": "Industrial Control System testbed",
+            "value": "industrial-control-system-testbed"
+          }, {
+            "label": "TEMPEST & Electromagnetic Security (EMC)",
+            "value": "tempest-&-electromagnetic-security-(emc)"
+          }, {
+            "label": "TEMPEST product vendor",
+            "value": "tempest-product-vendor"
+          }, {
+            "label": "Secure hosting",
+            "value": "secure-hosting"
+          }, {
+            "label": "Web security",
+            "value": "web-security"
+          }, {
+            "label": "Virtual security architecture & assessment",
+            "value": "virtual-security-architecture-&-assessment"
+          }, {
+            "label": "DDoS protection",
+            "value": "ddos-protection"
+          }, {
+            "label": "Security engineering",
+            "value": "security-engineering"
+          }, {
+            "label": "Software execution control",
+            "value": "software-execution-control"
+          }, {
+            "label": "Network hardening",
+            "value": "network-hardening"
+          }, {
+            "label": "Penetration testing",
+            "value": "penetration-testing"
+          }, {
+            "label": "IPSec VPN client",
+            "value": "ipsec-vpn-client"
+          }, {
+            "label": "Airwave",
+            "value": "airwave"
+          }, {
+            "label": "Access control devices & systems",
+            "value": "access-control-devices-&-systems"
+          }, {
+            "label": "Cloud security",
+            "value": "cloud-security"
+          }, {
+            "label": "Security Operations Centre (SOC) consulting",
+            "value": "security-operations-centre-(soc)-consulting"
+          }, {
+            "label": "Firewall",
+            "value": "firewall"
+          }],
+          "url": "",
+          "resource": "",
+          "custom": ""
+        },
+        "dataSrc": "values",
+        "valueProperty": "value",
+        "defaultValue": "",
+        "refreshOn": "",
+        "filter": "",
+        "authenticate": false,
+        "template": "<span>{{ item.label }}</span>",
+        "multiple": false,
+        "protected": false,
+        "unique": false,
+        "persistent": true,
+        "hidden": false,
+        "clearOnHide": true,
+        "validate": {
+          "required": false
+        },
+        "type": "select",
+        "inDataGrid": true,
+        "labelPosition": "top",
+        "tags": [],
+        "conditional": {
+          "show": "",
+          "when": null,
+          "eq": ""
+        },
+        "properties": {},
+        "customClass": "fixed-fayt"
+      }],
+      "tableView": true,
+      "label": "Protecting Systems Against Cyber Attack",
+      "key": "panel3DataGrid2",
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "type": "datagrid",
+      "addAnotherPosition": "bottom",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {},
+      "hideLabel": true,
+      "validate": {
+        "maxLength": 100,
+        "customMessage": "",
+        "minLength": 1
+      }
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tree": true,
+      "components": [{
+        "autofocus": false,
+        "input": true,
+        "tableView": true,
+        "label": "C: Detecting Cyber Security Events",
+        "key": "panel3DataGrid3DetectingCyberSecuritythreats",
+        "placeholder": "",
+        "data": {
+          "values": [{
+            "value": "c1SecurityMonitoringConsultancy",
+            "label": "C1: Security Monitoring - Consultancy"
+          }, {
+            "value": "c1SecurityMonitoringResearch",
+            "label": "C1: Security Monitoring - Research"
+          }, {
+            "value": "c1SecurityMonitoringTools",
+            "label": "C1: Security Monitoring - Tools"
+          }, {
+            "value": "c1SecurityMonitoringTraining",
+            "label": "C1: Security Monitoring - Training"
+          }, {
+            "value": "c2ProactiveSecurityEventDiscoveryConsultancy",
+            "label": "C2: Proactive Security Event Discovery - Consultancy"
+          }, {
+            "value": "c2ProactiveSecurityEventDiscoveryResearch",
+            "label": "C2: Proactive Security Event Discovery - Research"
+          }, {
+            "value": "c2ProactiveSecurityEventDiscoveryTools",
+            "label": "C2: Proactive Security Event Discovery - Tools"
+          }, {
+            "value": "c2ProactiveSecurityEventDiscoveryTraining",
+            "label": "C2: Proactive Security Event Discovery - Training"
+          }],
+          "json": [{
+            "label": "Cyber intelligence analysis",
+            "value": "cyber-intelligence-analysis"
+          }, {
+            "label": "Network analysis",
+            "value": "network-analysis"
+          }, {
+            "label": "Cyber threat intelligence",
+            "value": "cyber-threat-intelligence"
+          }, {
+            "label": "Threat vulnerability",
+            "value": "threat-vulnerability"
+          }, {
+            "label": "Cyber defence analysis",
+            "value": "cyber-defence-analysis"
+          }, {
+            "label": "eDiscovery",
+            "value": "ediscovery"
+          }],
+          "url": "",
+          "resource": "",
+          "custom": ""
+        },
+        "dataSrc": "values",
+        "valueProperty": "value",
+        "defaultValue": "",
+        "refreshOn": "",
+        "filter": "",
+        "authenticate": false,
+        "template": "<span>{{ item.label }}</span>",
+        "multiple": false,
+        "protected": false,
+        "unique": false,
+        "persistent": true,
+        "hidden": false,
+        "clearOnHide": true,
+        "validate": {
+          "required": false
+        },
+        "type": "select",
+        "inDataGrid": true,
+        "labelPosition": "top",
+        "tags": [],
+        "conditional": {
+          "show": "",
+          "when": null,
+          "eq": ""
+        },
+        "properties": {},
+        "customClass": "fixed-fayt"
+      }],
+      "tableView": true,
+      "label": "Detecting Cyber Security threats",
+      "key": "panel3DataGrid3",
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "type": "datagrid",
+      "addAnotherPosition": "bottom",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {},
+      "hideLabel": true,
+      "validate": {
+        "maxLength": 100,
+        "minLength": 1
+      }
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tree": true,
+      "components": [{
+        "autofocus": false,
+        "input": true,
+        "tableView": true,
+        "label": "D: Minimising the Impact of Cyber Security Incidents",
+        "key": "panel3DataGrid4Minimisingtheimpactofcybersecurityincidents",
+        "placeholder": "",
+        "data": {
+          "values": [{
+            "value": "d1ResponseAndRecoveryPlanningConsultancy",
+            "label": "D1: Response and Recovery Planning - Consultancy"
+          }, {
+            "value": "d1ResponseAndRecoveryPlanningFacilities",
+            "label": "D1: Response and Recovery Planning - Facilities"
+          }, {
+            "value": "d1ResponseAndRecoveryPlanningResearch",
+            "label": "D1: Response and Recovery Planning - Research"
+          }, {
+            "value": "d1ResponseAndRecoveryPlanningTools",
+            "label": "D1: Response and Recovery Planning - Tools"
+          }, {
+            "value": "d1ResponseAndRecoveryPlanningTraining",
+            "label": "D1: Response and Recovery Planning - Training"
+          }, {
+            "value": "d2LessonsLearnedConsultancy",
+            "label": "D2: Lessons Learned - Consultancy"
+          }, {
+            "value": "d2LessonsLearnedResearch",
+            "label": "D2: Lessons Learned - Research"
+          }, {
+            "value": "d2LessonsLearnedTraining",
+            "label": "D2: Lessons Learned - Training"
+          }],
+          "json": [{
+            "label": "Fraud identification",
+            "value": "fraud-identification"
+          }, {
+            "label": "Cyber Incidents",
+            "value": "cyber-incidents"
+          }, {
+            "label": "Cyber Security Consultancy",
+            "value": "cyber-security-consultancy"
+          }, {
+            "label": "Tailored evaluation",
+            "value": "tailored-evaluation"
+          }, {
+            "label": "Attack analysis",
+            "value": "attack-analysis"
+          }, {
+            "label": "Forensics",
+            "value": "forensics"
+          }, {
+            "label": "Cyber security operations",
+            "value": "cyber-security-operations"
+          }, {
+            "label": "Malware investigation",
+            "value": "malware-investigation"
+          }, {
+            "label": "Capability development",
+            "value": "capability-development"
+          }, {
+            "label": "Secure code reviews",
+            "value": "secure-code-reviews"
+          }, {
+            "label": "Cyber exercise services",
+            "value": "cyber-exercise-services"
+          }, {
+            "label": "Cyber range exercising",
+            "value": "cyber-range-exercising"
+          }, {
+            "label": "Penetration testing",
+            "value": "penetration-testing"
+          }, {
+            "label": "Industrial Control System testbed",
+            "value": "industrial-control-system-testbed"
+          }, {
+            "label": "TEMPEST & Electromagnetic Security (EMC)",
+            "value": "tempest-&-electromagnetic-security-(emc)"
+          }, {
+            "label": "TEMPEST product vendor",
+            "value": "tempest-product-vendor"
+          }],
+          "url": "",
+          "resource": "",
+          "custom": ""
+        },
+        "dataSrc": "values",
+        "valueProperty": "value",
+        "defaultValue": "",
+        "refreshOn": "",
+        "filter": "",
+        "authenticate": false,
+        "template": "<span>{{ item.label }}</span>",
+        "multiple": false,
+        "protected": false,
+        "unique": false,
+        "persistent": true,
+        "hidden": false,
+        "clearOnHide": true,
+        "validate": {
+          "required": false
+        },
+        "type": "select",
+        "inDataGrid": true,
+        "labelPosition": "top",
+        "tags": [],
+        "conditional": {
+          "show": "",
+          "when": null,
+          "eq": ""
+        },
+        "properties": {},
+        "customClass": "fixed-fayt"
+      }],
+      "tableView": true,
+      "label": "Minimising the impact of cyber security incidents",
+      "key": "panel3DataGrid4",
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "type": "datagrid",
+      "addAnotherPosition": "bottom",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {},
+      "validate": {
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "hideLabel": true
+    }, {
+      "key": "panel3Content",
+      "label": "Content",
+      "input": false,
+      "tag": "div",
+      "attrs": [{
+        "value": "alert",
+        "attr": "role"
+      }],
+      "className": "alert alert-info",
+      "content": "Please use this area to input any type of offering you believe cannot be captured in the above list. Please associate your offering type using the most relevant NIS Objective where possible: e.g. A2: Risk Management - <my product type>. This box is to be used to capture a type of offering, so please keep the description of a similarly high level to ‘consultancy’, ‘tool’, ‘training’, ‘research’ or ‘facilities’.",
+      "type": "htmlelement",
+      "hideLabel": true,
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {}
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tree": true,
+      "components": [{
+        "autofocus": false,
+        "input": true,
+        "tableView": true,
+        "inputType": "text",
+        "inputMask": "",
+        "label": "Additional Products and Services",
+        "key": "panel3AdditionalProductsandServicesAdditionalProductsandServices",
+        "placeholder": "",
+        "prefix": "",
+        "suffix": "",
+        "multiple": false,
+        "defaultValue": "",
+        "protected": false,
+        "unique": false,
+        "persistent": true,
+        "hidden": false,
+        "clearOnHide": true,
+        "spellcheck": true,
+        "validate": {
+          "required": false,
+          "minLength": "",
+          "maxLength": "",
+          "pattern": "",
+          "custom": "",
+          "customPrivate": false
+        },
+        "conditional": {
+          "show": "",
+          "when": null,
+          "eq": ""
+        },
+        "type": "textfield",
+        "inDataGrid": true,
+        "labelPosition": "top",
+        "tags": [],
+        "properties": {},
+        "tooltip": "",
+        "description": "",
+        "customClass": "fixed-fayt"
+      }],
+      "tableView": true,
+      "label": "Additional Products and Services",
+      "key": "panel3AdditionalProductsandServices",
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "type": "datagrid",
+      "addAnotherPosition": "bottom",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {},
+      "hideLabel": true,
+      "tooltip": "",
+      "condensed": true
+    }],
+    "type": "panel",
+    "breadcrumb": "default",
+    "hideLabel": true,
+    "tags": [],
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "properties": {},
+    "label": "panel3"
+  }, {
+    "clearOnHide": false,
+    "key": "panel4",
+    "input": false,
+    "title": "Organisation Contacts",
+    "theme": "default",
+    "tableView": false,
+    "components": [{
+      "autofocus": false,
+      "input": true,
+      "tree": true,
+      "components": [{
+        "autofocus": false,
+        "input": true,
+        "tableView": true,
+        "inputType": "text",
+        "inputMask": "",
+        "label": "Title/Role",
+        "key": "organisationContactsTitleRole",
+        "placeholder": "",
+        "prefix": "",
+        "suffix": "",
+        "multiple": false,
+        "defaultValue": "",
+        "protected": false,
+        "unique": false,
+        "persistent": true,
+        "hidden": false,
+        "clearOnHide": true,
+        "spellcheck": true,
+        "validate": {
+          "required": false,
+          "minLength": "",
+          "maxLength": "",
+          "pattern": "",
+          "custom": "",
+          "customPrivate": false
+        },
+        "conditional": {
+          "show": "",
+          "when": null,
+          "eq": ""
+        },
+        "type": "textfield",
+        "inDataGrid": true,
+        "labelPosition": "top",
+        "tags": [],
+        "properties": {},
+        "customClass": "maybe-inline"
+      }, {
+        "autofocus": false,
+        "input": true,
+        "tableView": true,
+        "inputType": "text",
+        "inputMask": "",
+        "label": "Name",
+        "key": "organisationContactsName",
+        "placeholder": "",
+        "prefix": "",
+        "suffix": "",
+        "multiple": false,
+        "defaultValue": "",
+        "protected": false,
+        "unique": false,
+        "persistent": true,
+        "hidden": false,
+        "clearOnHide": true,
+        "spellcheck": true,
+        "validate": {
+          "required": false,
+          "minLength": "",
+          "maxLength": "",
+          "pattern": "",
+          "custom": "",
+          "customPrivate": false
+        },
+        "conditional": {
+          "show": "",
+          "when": null,
+          "eq": ""
+        },
+        "type": "textfield",
+        "inDataGrid": true,
+        "labelPosition": "top",
+        "tags": [],
+        "properties": {},
+        "customClass": "maybe-inline"
+      }, {
+        "autofocus": false,
+        "input": true,
+        "tableView": true,
+        "inputType": "text",
+        "inputMask": "",
+        "label": "Email",
+        "key": "organisationContactsEmail",
+        "placeholder": "",
+        "prefix": "",
+        "suffix": "",
+        "multiple": false,
+        "defaultValue": "",
+        "protected": false,
+        "unique": false,
+        "persistent": true,
+        "hidden": false,
+        "clearOnHide": true,
+        "spellcheck": true,
+        "validate": {
+          "required": false,
+          "minLength": "",
+          "maxLength": "",
+          "pattern": "",
+          "custom": "",
+          "customPrivate": false
+        },
+        "conditional": {
+          "show": "",
+          "when": null,
+          "eq": ""
+        },
+        "type": "textfield",
+        "inDataGrid": true,
+        "labelPosition": "top",
+        "tags": [],
+        "properties": {},
+        "customClass": "maybe-inline"
+      }, {
+        "autofocus": false,
+        "input": true,
+        "tableView": true,
+        "inputType": "tel",
+        "inputMask": "",
+        "label": "Contact Number",
+        "key": "organisationContactsContactNumber",
+        "placeholder": "",
+        "prefix": "",
+        "suffix": "",
+        "multiple": false,
+        "protected": false,
+        "unique": false,
+        "persistent": true,
+        "hidden": false,
+        "defaultValue": "",
+        "clearOnHide": true,
+        "validate": {
+          "required": false
+        },
+        "type": "phoneNumber",
+        "inDataGrid": true,
+        "labelPosition": "top",
+        "tags": [],
+        "conditional": {
+          "show": "",
+          "when": null,
+          "eq": ""
+        },
+        "properties": {},
+        "customClass": "maybe-inline"
+      }],
+      "tableView": true,
+      "label": "Organisation Contacts",
+      "key": "organisationContacts",
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "type": "datagrid",
+      "addAnotherPosition": "bottom",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {},
+      "hideLabel": true,
+      "customClass": "",
+      "validate": {
+        "minLength": 1,
+        "maxLength": 5
+      }
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "label": "Please tick the following boxes:",
+      "key": "panel4Pleasetickthefollowingboxes",
+      "values": [{
+        "value": "iHaveReadTheCniMarketplaceTermsAndConditionsTCsAndAgreeWithTheseTCs",
+        "label": "I have read the CNI Marketplace Terms and Conditions (T&Cs) and agree with these T&Cs.",
+        "shortcut": ""
+      }, {
+        "value": "iConfirmTheInformationIHaveProvidedWithinThisFormIsAccurateAndATrueRepresentationOfMyCompany",
+        "label": "I confirm the information I have provided within this form is accurate and a true representation of my company.",
+        "shortcut": ""
+      }],
+      "inline": false,
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "validate": {
+        "required": true
+      },
+      "type": "selectboxes",
+      "labelPosition": "top",
+      "optionsLabelPosition": "left",
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "labelWidth": 30,
+      "labelMargin": 3
+    }],
+    "type": "panel",
+    "breadcrumb": "default",
+    "hideLabel": true,
+    "tags": [],
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "properties": {},
+    "label": "panel4"
+  }, {
+    "autofocus": false,
+    "input": true,
+    "label": "Submit",
+    "tableView": false,
+    "key": "submit",
+    "size": "md",
+    "leftIcon": "",
+    "rightIcon": "",
+    "block": false,
+    "action": "submit",
+    "disableOnInvalid": false,
+    "theme": "primary",
+    "type": "button"
+  }],
+  "display": "form",
+  "submissionAccess": [{
+    "roles": [],
+    "type": "create_all"
+  }, {
+    "roles": ["administrator", "authenticated"],
+    "type": "read_all"
+  }, {
+    "roles": ["administrator"],
+    "type": "update_all"
+  }, {
+    "roles": ["administrator"],
+    "type": "delete_all"
+  }, {
+    "roles": ["authenticated", "anonymous"],
+    "type": "create_own"
+  }, {
+    "roles": ["authenticated"],
+    "type": "read_own"
+  }, {
+    "roles": ["authenticated"],
+    "type": "update_own"
+  }, {
+    "roles": ["authenticated"],
+    "type": "delete_own"
+  }],
+  "title": "CNI Supplier",
+  "name": "cniSupplier",
+  "path": "cnisupplier",
+  "access": [{
+    "roles": ["administrator", "authenticated", "anonymous"],
+    "type": "read_all"
+  }]
+}
+
+
+,"memberRegistrationForm": {
+  "type": "form",
+  "tags": ["common"],
+  "deleted": null,
+  "owner": null,
+  "components": [{
+    "clearOnHide": false,
+    "key": "user",
+    "input": false,
+    "title": "About you",
+    "theme": "default",
+    "tableView": false,
+    "components": [{
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "inputType": "text",
+      "inputMask": "",
+      "label": "Name",
+      "key": "userName",
+      "placeholder": "Enter your full name",
+      "prefix": "",
+      "suffix": "",
+      "multiple": false,
+      "defaultValue": "",
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "spellcheck": true,
+      "validate": {
+        "required": true,
+        "minLength": "",
+        "maxLength": "",
+        "pattern": "",
+        "custom": "",
+        "customPrivate": false
+      },
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "type": "textfield",
+      "labelPosition": "top",
+      "tags": [],
+      "properties": {},
+      "lockKey": true
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "inputType": "text",
+      "inputMask": "",
+      "label": "Job title",
+      "key": "userJobtitle",
+      "placeholder": "Enter your job title",
+      "prefix": "",
+      "suffix": "",
+      "multiple": false,
+      "defaultValue": "",
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "spellcheck": true,
+      "validate": {
+        "required": true,
+        "minLength": "",
+        "maxLength": "",
+        "pattern": "",
+        "custom": "",
+        "customPrivate": false
+      },
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "type": "textfield",
+      "labelPosition": "top",
+      "tags": [],
+      "properties": {},
+      "lockKey": true
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "inputType": "email",
+      "label": "Email",
+      "key": "userEmail",
+      "placeholder": "Enter your email address",
+      "prefix": "",
+      "suffix": "",
+      "defaultValue": "",
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "kickbox": {
+        "enabled": false
+      },
+      "type": "email",
+      "labelPosition": "top",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {},
+      "validate": {
+        "required": true
+      },
+      "lockKey": true
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "inputType": "tel",
+      "inputMask": "(99999) 999 999",
+      "label": "Tel work",
+      "key": "userTelwork",
+      "placeholder": "Enter your work telephone number",
+      "prefix": "",
+      "suffix": "",
+      "multiple": false,
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "hidden": false,
+      "defaultValue": "",
+      "clearOnHide": true,
+      "validate": {
+        "required": true
+      },
+      "type": "phoneNumber",
+      "labelPosition": "top",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {},
+      "lockKey": true
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "inputType": "tel",
+      "inputMask": "(99999) 999 999",
+      "label": "Tel mobile",
+      "key": "userTelmobile",
+      "placeholder": "Enter your mobile telephone number",
+      "prefix": "",
+      "suffix": "",
+      "multiple": false,
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "hidden": false,
+      "defaultValue": "",
+      "clearOnHide": true,
+      "validate": {
+        "required": true
+      },
+      "type": "phoneNumber",
+      "labelPosition": "top",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {},
+      "description": "This is required for 2FA",
+      "lockKey": true
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "label": "I want to use the CNI Marketplace for:",
+      "key": "userIwanttousetheCniMarketplacefor",
+      "values": [{
+        "value": "buying",
+        "label": "Buying",
+        "shortcut": ""
+      }, {
+        "value": "selling",
+        "label": "Selling",
+        "shortcut": ""
+      }],
+      "inline": false,
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "validate": {
+        "required": true
+      },
+      "type": "selectboxes",
+      "labelPosition": "top",
+      "optionsLabelPosition": "right",
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "lockKey": true
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "inputType": "radio",
+      "label": "Are you an existing CiSP member?",
+      "key": "userAreyouanexistingCiSPmember",
+      "values": [{
+        "value": "yes",
+        "label": "Yes",
+        "shortcut": ""
+      }, {
+        "value": "no",
+        "label": "No",
+        "shortcut": ""
+      }],
+      "defaultValue": "no",
+      "protected": false,
+      "fieldSet": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "validate": {
+        "required": true,
+        "custom": "",
+        "customPrivate": false
+      },
+      "type": "radio",
+      "labelPosition": "top",
+      "optionsLabelPosition": "right",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {},
+      "lockKey": true
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "inputType": "text",
+      "inputMask": "",
+      "label": "CiSP Username",
+      "key": "userCispUsername",
+      "placeholder": "Enter your existing CiSP username",
+      "prefix": "",
+      "suffix": "",
+      "multiple": false,
+      "defaultValue": "",
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "spellcheck": true,
+      "validate": {
+        "required": true,
+        "minLength": "",
+        "maxLength": "",
+        "pattern": "",
+        "custom": "",
+        "customPrivate": false
+      },
+      "conditional": {
+        "show": "true",
+        "when": "userAreyouanexistingCiSPmember",
+        "eq": "yes"
+      },
+      "type": "textfield",
+      "labelPosition": "top",
+      "tags": [],
+      "properties": {},
+      "lockKey": true
+    }],
+    "type": "panel",
+    "breadcrumb": "default",
+    "hideLabel": true,
+    "tags": [],
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "properties": {},
+    "label": "panel",
+    "lockKey": true
+  }, {
+    "clearOnHide": false,
+    "key": "panel",
+    "input": false,
+    "title": "About your organisation",
+    "theme": "default",
+    "tableView": false,
+    "components": [{
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "inputType": "text",
+      "inputMask": "",
+      "label": "Organisation Name",
+      "key": "panelOrganisationName",
+      "placeholder": "Enter your organisation's name",
+      "prefix": "",
+      "suffix": "",
+      "multiple": false,
+      "defaultValue": "",
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "spellcheck": true,
+      "validate": {
+        "required": true,
+        "minLength": "",
+        "maxLength": "",
+        "pattern": "",
+        "custom": "",
+        "customPrivate": false
+      },
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "type": "textfield",
+      "labelPosition": "top",
+      "tags": [],
+      "properties": {},
+      "lockKey": true
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "label": "Address",
+      "key": "panelAddress",
+      "placeholder": "Enter your organisation's registered address",
+      "prefix": "",
+      "suffix": "",
+      "rows": 3,
+      "multiple": false,
+      "defaultValue": "",
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "wysiwyg": false,
+      "clearOnHide": true,
+      "spellcheck": true,
+      "validate": {
+        "required": true,
+        "minLength": "",
+        "maxLength": "",
+        "pattern": "",
+        "custom": ""
+      },
+      "type": "textarea",
+      "labelPosition": "top",
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {},
+      "lockKey": true
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "label": "Sectors",
+      "key": "panelSectors",
+      "values": [{
+        "value": "finance",
+        "label": "Finance",
+        "shortcut": ""
+      }, {
+        "value": "chemicals",
+        "label": "Chemicals",
+        "shortcut": ""
+      }, {
+        "value": "civilNuclear",
+        "label": "Civil Nuclear",
+        "shortcut": ""
+      }, {
+        "value": "communications",
+        "label": "Communications",
+        "shortcut": ""
+      }, {
+        "value": "energy",
+        "label": "Energy",
+        "shortcut": ""
+      }, {
+        "value": "food",
+        "label": "Food",
+        "shortcut": ""
+      }, {
+        "value": "space",
+        "label": "Space",
+        "shortcut": ""
+      }, {
+        "value": "transport",
+        "label": "Transport",
+        "shortcut": ""
+      }, {
+        "value": "water",
+        "label": "Water",
+        "shortcut": ""
+      }, {
+        "value": "others",
+        "label": "Other(s)",
+        "shortcut": ""
+      }],
+      "inline": false,
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "validate": {
+        "required": true
+      },
+      "type": "selectboxes",
+      "labelPosition": "top",
+      "optionsLabelPosition": "right",
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "lockKey": true
+    }, {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "inputType": "text",
+      "inputMask": "",
+      "label": "Additional Sectors",
+      "key": "panelAdditionalSectors",
+      "placeholder": "",
+      "prefix": "",
+      "suffix": "",
+      "multiple": true,
+      "defaultValue": "",
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "spellcheck": true,
+      "validate": {
+        "required": true,
+        "minLength": "",
+        "maxLength": "",
+        "pattern": "",
+        "custom": "",
+        "customPrivate": false
+      },
+      "conditional": {
+        "show": "true",
+        "when": "panelSectors",
+        "eq": "others"
+      },
+      "type": "textfield",
+      "labelPosition": "top",
+      "tags": [],
+      "properties": {},
+      "lockKey": true
+    }],
+    "type": "panel",
+    "breadcrumb": "default",
+    "hideLabel": true,
+    "tags": [],
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "properties": {},
+    "lockKey": true,
+    "label": "panel"
+  }, {
+    "autofocus": false,
+    "input": true,
+    "label": "Submit",
+    "tableView": false,
+    "key": "submit",
+    "size": "md",
+    "leftIcon": "",
+    "rightIcon": "",
+    "block": false,
+    "action": "submit",
+    "disableOnInvalid": false,
+    "theme": "primary",
+    "type": "button"
+  }],
+  "display": "form",
+  "submissionAccess": [{
+    "roles": [],
+    "type": "create_all"
+  }, {
+    "roles": ["administrator", "authenticated"],
+    "type": "read_all"
+  }, {
+    "roles": ["administrator"],
+    "type": "update_all"
+  }, {
+    "roles": [],
+    "type": "delete_all"
+  }, {
+    "roles": ["authenticated", "anonymous"],
+    "type": "create_own"
+  }, {
+    "roles": ["authenticated"],
+    "type": "read_own"
+  }, {
+    "roles": ["authenticated"],
+    "type": "update_own"
+  }, {
+    "roles": ["authenticated"],
+    "type": "delete_own"
+  }],
+  "title": "Member Registration Form",
+  "name": "memberRegistrationForm",
+  "path": "member-registration",
+  "access": [{
+    "roles": ["administrator", "authenticated", "anonymous"],
+    "type": "read_all"
+  }]
+}
+
+  },
+  "actions": {
+    "userSave": {
+      "title": "Save Submission",
+      "name": "save",
+      "form": "user",
+      "handler": ["before"],
+      "method": ["create", "update"],
+      "priority": 11,
+      "settings": {}
+    },
+    "adminSave": {
+      "title": "Save Submission",
+      "name": "save",
+      "form": "admin",
+      "handler": ["before"],
+      "method": ["create", "update"],
+      "priority": 11,
+      "settings": {}
+    },
+    "memberOrg:save": {
+      "title": "Save Submission",
+      "name": "save",
+      "form": "memberOrg",
+      "handler": ["before"],
+      "method": ["create", "update"],
+      "priority": 10,
+      "settings": {}
+    },
+    "member:save": {
+      "title": "Save Submission",
+      "name": "save",
+      "form": "member",
+      "handler": ["before"],
+      "method": ["create", "update"],
+      "priority": 10,
+      "settings": {}
+    },
+    "memberRegistrationForm:save": {
+      "title": "Save Submission",
+      "name": "save",
+      "form": "memberRegistrationForm",
+      "handler": ["before"],
+      "method": ["create", "update"],
+      "priority": 10,
+      "settings": {}
+    },
+    "cniSupplier:save": {
+      "title": "Save Submission",
+      "name": "save",
+      "form": "cniSupplier",
+      "handler": ["before"],
+      "method": ["create", "update"],
+      "priority": 10,
+      "settings": {}
+    },
+    "userLogin": {
+      "name": "login",
+      "title": "Login",
+      "form": "userLogin",
+      "priority": 2,
+      "method": ["create"],
+      "handler": ["before"],
+      "settings": {
+        "resources": ["user", "admin"],
+        "username": "email",
+        "password": "password"
+      }
+    },
+    "userRegisterSave": {
+      "title": "Save Submission",
+      "name": "save",
+      "form": "userRegister",
+      "handler": ["before"],
+      "method": ["create"],
+      "priority": 10,
+      "settings": {
+        "resource": "user",
+        "fields": {
+          "fullName": "fullName",
+          "email": "email",
+          "password": "password"
+        }
+      }
+    },
+    "userRegisterLogin": {
+      "name": "login",
+      "title": "Login",
+      "form": "userRegister",
+      "priority": 2,
+      "method": ["create"],
+      "handler": ["before"],
+      "settings": {
+        "resources": ["user"],
+        "username": "email",
+        "password": "password"
+      }
+    },
+    "authenticatedRole": {
+      "name": "role",
+      "title": "Role Assignment",
+      "form": "user",
+      "priority": 1,
+      "handler": ["after"],
+      "method": ["create"],
+      "settings": {
+        "role": "authenticated",
+        "type": "add",
+        "association": "new"
+      }
+    },
+    "adminRole": {
+      "name": "role",
+      "title": "Role Assignment",
+      "form": "admin",
+      "priority": 1,
+      "handler": ["after"],
+      "method": ["create"],
+      "settings": {
+        "role": "administrator",
+        "type": "add",
+        "association": "new"
+      }
+    }
+  },
+  "resources": {
+    "user": {
+      "title": "User",
+      "type": "resource",
+      "name": "user",
+      "path": "user",
+      "components": [
+        {
+          "input": true,
+          "tableView": true,
+          "inputType": "text",
+          "inputMask": "",
+          "label": "Full Name",
+          "key": "fullName",
+          "placeholder": "Enter your full name",
+          "prefix": "",
+          "suffix": "",
+          "multiple": false,
+          "defaultValue": "",
+          "protected": false,
+          "unique": false,
+          "persistent": true,
+          "validate": {
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "pattern": "",
+            "custom": "",
+            "customPrivate": false
+          },
+          "type": "textfield"
+        },
+        {
+          "type": "email",
+          "persistent": true,
+          "unique": false,
+          "protected": false,
+          "defaultValue": "",
+          "suffix": "",
+          "prefix": "",
+          "placeholder": "Enter your email address",
+          "key": "email",
+          "label": "Email",
+          "inputType": "email",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "type": "password",
+          "persistent": true,
+          "protected": true,
+          "suffix": "",
+          "prefix": "",
+          "placeholder": "Enter your password.",
+          "key": "password",
+          "label": "Password",
+          "inputType": "password",
+          "tableView": false,
+          "input": true
+        },
+        {
+          "type": "button",
+          "theme": "primary",
+          "disableOnInvalid": true,
+          "action": "submit",
+          "block": false,
+          "rightIcon": "",
+          "leftIcon": "",
+          "size": "md",
+          "key": "submit",
+          "tableView": false,
+          "label": "Submit",
+          "input": true
+        }
+      ],
+      "access": [
+        {
+          "type": "read_all",
+          "roles": [
+            "anonymous",
+            "authenticated",
+            "administrator"
+          ]
+        }
+      ],
+      "submissionAccess": [
+        {
+          "type": "create_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "read_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "update_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "delete_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "create_own",
+          "roles": []
+        },
+        {
+          "type": "read_own",
+          "roles": []
+        },
+        {
+          "type": "update_own",
+          "roles": []
+        },
+        {
+          "type": "delete_own",
+          "roles": []
+        }
+      ]
+    },
+    "admin": {
+      "title": "Admin",
+      "type": "resource",
+      "name": "admin",
+      "path": "admin",
+      "components": [
+        {
+          "input": true,
+          "tableView": true,
+          "inputType": "email",
+          "label": "Email",
+          "key": "email",
+          "placeholder": "Enter your email address",
+          "prefix": "",
+          "suffix": "",
+          "defaultValue": "",
+          "protected": false,
+          "unique": false,
+          "persistent": true,
+          "type": "email"
+        },
+        {
+          "input": true,
+          "tableView": false,
+          "inputType": "password",
+          "label": "Password",
+          "key": "password",
+          "placeholder": "Enter your password.",
+          "prefix": "",
+          "suffix": "",
+          "protected": true,
+          "persistent": true,
+          "type": "password"
+        },
+        {
+          "input": true,
+          "label": "Submit",
+          "tableView": false,
+          "key": "submit",
+          "size": "md",
+          "leftIcon": "",
+          "rightIcon": "",
+          "block": false,
+          "action": "submit",
+          "disableOnInvalid": true,
+          "theme": "primary",
+          "type": "button"
+        }
+      ],
+      "access": [
+        {
+          "type": "read_all",
+          "roles": [
+            "anonymous",
+            "authenticated",
+            "administrator"
+          ]
+        }
+      ],
+      "submissionAccess": [
+        {
+          "type": "create_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "read_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "update_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "delete_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "create_own",
+          "roles": []
+        },
+        {
+          "type": "read_own",
+          "roles": []
+        },
+        {
+          "type": "update_own",
+          "roles": []
+        },
+        {
+          "type": "delete_own",
+          "roles": []
+        }
+      ]
+    },
+"member":{
+  "_id": ObjectId("5b30b0a66ec6330d0950b8e6"),
+  "type": "resource",
+  "tags": ["common"],
+  "deleted": null,
+  "owner": null,
+  "components": [{
+    "autofocus": false,
+    "input": true,
+    "tableView": true,
+    "inputType": "text",
+    "inputMask": "",
+    "label": "Name",
+    "key": "name",
+    "placeholder": "Enter your full name",
+    "prefix": "",
+    "suffix": "",
+    "multiple": false,
+    "defaultValue": "",
+    "protected": false,
+    "unique": false,
+    "persistent": true,
+    "hidden": false,
+    "clearOnHide": true,
+    "spellcheck": true,
+    "validate": {
+      "required": true,
+      "minLength": "",
+      "maxLength": "",
+      "pattern": "",
+      "custom": "",
+      "customPrivate": false
+    },
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "type": "textfield",
+    "labelPosition": "top",
+    "tags": [],
+    "properties": {}
+  }, {
+    "autofocus": false,
+    "input": true,
+    "tableView": true,
+    "inputType": "text",
+    "inputMask": "",
+    "label": "Job title",
+    "key": "jobtitle",
+    "placeholder": "Enter your job title",
+    "prefix": "",
+    "suffix": "",
+    "multiple": false,
+    "defaultValue": "",
+    "protected": false,
+    "unique": false,
+    "persistent": true,
+    "hidden": false,
+    "clearOnHide": true,
+    "spellcheck": true,
+    "validate": {
+      "required": true,
+      "minLength": "",
+      "maxLength": "",
+      "pattern": "",
+      "custom": "",
+      "customPrivate": false
+    },
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "type": "textfield",
+    "labelPosition": "top",
+    "tags": [],
+    "properties": {}
+  }, {
+    "autofocus": false,
+    "input": true,
+    "tableView": true,
+    "inputType": "email",
+    "label": "Email",
+    "key": "email",
+    "placeholder": "Enter your email address",
+    "prefix": "",
+    "suffix": "",
+    "defaultValue": "",
+    "protected": false,
+    "unique": false,
+    "persistent": true,
+    "hidden": false,
+    "clearOnHide": true,
+    "kickbox": {
+      "enabled": false
+    },
+    "type": "email",
+    "labelPosition": "top",
+    "tags": [],
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "properties": {},
+    "validate": {
+      "required": true
+    }
+  }, {
+    "autofocus": false,
+    "input": true,
+    "tableView": true,
+    "inputType": "tel",
+    "inputMask": "(99999) 999 999",
+    "label": "Tel work",
+    "key": "telwork",
+    "placeholder": "Enter your work telephone number",
+    "prefix": "",
+    "suffix": "",
+    "multiple": false,
+    "protected": false,
+    "unique": false,
+    "persistent": true,
+    "hidden": false,
+    "defaultValue": "",
+    "clearOnHide": true,
+    "validate": {
+      "required": true
+    },
+    "type": "phoneNumber",
+    "labelPosition": "top",
+    "tags": [],
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "properties": {}
+  }, {
+    "autofocus": false,
+    "input": true,
+    "tableView": true,
+    "inputType": "tel",
+    "inputMask": "(99999) 999 999",
+    "label": "Tel mobile",
+    "key": "telmobile",
+    "placeholder": "Enter your mobile telephone number",
+    "prefix": "",
+    "suffix": "",
+    "multiple": false,
+    "protected": false,
+    "unique": false,
+    "persistent": true,
+    "hidden": false,
+    "defaultValue": "",
+    "clearOnHide": true,
+    "validate": {
+      "required": true
+    },
+    "type": "phoneNumber",
+    "labelPosition": "top",
+    "tags": [],
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "properties": {},
+    "description": "This is required for 2FA"
+  }, {
+    "autofocus": false,
+    "input": true,
+    "tableView": true,
+    "label": "I want to use the CNI Marketplace for:",
+    "key": "iwanttousetheCniMarketplacefor",
+    "values": [{
+      "value": "buying",
+      "label": "Buying",
+      "shortcut": ""
+    }, {
+      "value": "selling",
+      "label": "Selling",
+      "shortcut": ""
+    }],
+    "inline": false,
+    "protected": false,
+    "persistent": true,
+    "hidden": false,
+    "clearOnHide": true,
+    "validate": {
+      "required": true
+    },
+    "type": "selectboxes",
+    "labelPosition": "top",
+    "optionsLabelPosition": "right",
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    }
+  }, {
+    "autofocus": false,
+    "input": true,
+    "tableView": true,
+    "inputType": "radio",
+    "label": "Are you an existing CiSP member?",
+    "key": "areyouanexistingCiSPmember",
+    "values": [{
+      "value": "yes",
+      "label": "Yes",
+      "shortcut": ""
+    }, {
+      "value": "no",
+      "label": "No",
+      "shortcut": ""
+    }],
+    "defaultValue": "no",
+    "protected": false,
+    "fieldSet": false,
+    "persistent": true,
+    "hidden": false,
+    "clearOnHide": true,
+    "validate": {
+      "required": true,
+      "custom": "",
+      "customPrivate": false
+    },
+    "type": "radio",
+    "labelPosition": "top",
+    "optionsLabelPosition": "right",
+    "tags": [],
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "properties": {}
+  }, {
+    "autofocus": false,
+    "input": true,
+    "tableView": true,
+    "inputType": "text",
+    "inputMask": "",
+    "label": "CiSP Username",
+    "key": "cispUsername",
+    "placeholder": "Enter your existing CiSP username",
+    "prefix": "",
+    "suffix": "",
+    "multiple": false,
+    "defaultValue": "",
+    "protected": false,
+    "unique": false,
+    "persistent": true,
+    "hidden": false,
+    "clearOnHide": true,
+    "spellcheck": true,
+    "validate": {
+      "required": true,
+      "minLength": "",
+      "maxLength": "",
+      "pattern": "",
+      "custom": "",
+      "customPrivate": false
+    },
+    "conditional": {
+      "show": "true",
+      "when": "areyouanexistingCiSPmember",
+      "eq": "yes"
+    },
+    "type": "textfield",
+    "labelPosition": "top",
+    "tags": [],
+    "properties": {},
+    "lockKey": true
+  }, {
+    "autofocus": false,
+    "input": true,
+    "label": "Submit",
+    "tableView": false,
+    "key": "submit",
+    "size": "md",
+    "leftIcon": "",
+    "rightIcon": "",
+    "block": false,
+    "action": "submit",
+    "disableOnInvalid": false,
+    "theme": "primary",
+    "type": "button"
+  }],
+  "display": "form",
+  "submissionAccess": [{
+    "roles": ["authenticated"],
+    "type": "create_own"
+  }, {
+    "roles": ["authenticated"],
+    "type": "read_own"
+  }, {
+    "roles": ["authenticated"],
+    "type": "update_own"
+  }, {
+    "roles": ["authenticated"],
+    "type": "delete_own"
+  }],
+  "title": "Member",
+  "name": "member",
+  "path": "member",
+  "access": [{
+    "roles": ["administrator", "authenticated", "anonymous"],
+    "type": "read_all"
+  }]
+}
+
+
+
+
+, "memberOrg":{
+  "type": "resource",
+  "tags": ["common"],
+  "deleted": null,
+  "owner": null,
+  "components": [{
+    "autofocus": false,
+    "input": true,
+    "tableView": true,
+    "inputType": "text",
+    "inputMask": "",
+    "label": "Organisation Name",
+    "key": "organisationName",
+    "placeholder": "Enter your organisation's name",
+    "prefix": "",
+    "suffix": "",
+    "multiple": false,
+    "defaultValue": "",
+    "protected": false,
+    "unique": false,
+    "persistent": true,
+    "hidden": false,
+    "clearOnHide": true,
+    "spellcheck": true,
+    "validate": {
+      "required": true,
+      "minLength": "",
+      "maxLength": "",
+      "pattern": "",
+      "custom": "",
+      "customPrivate": false
+    },
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "type": "textfield",
+    "labelPosition": "top",
+    "tags": [],
+    "properties": {}
+  }, {
+    "autofocus": false,
+    "input": true,
+    "tableView": true,
+    "label": "Address",
+    "key": "address",
+    "placeholder": "Enter your organisation's registered address",
+    "prefix": "",
+    "suffix": "",
+    "rows": 3,
+    "multiple": false,
+    "defaultValue": "",
+    "protected": false,
+    "persistent": true,
+    "hidden": false,
+    "wysiwyg": false,
+    "clearOnHide": true,
+    "spellcheck": true,
+    "validate": {
+      "required": true,
+      "minLength": "",
+      "maxLength": "",
+      "pattern": "",
+      "custom": ""
+    },
+    "type": "textarea",
+    "labelPosition": "top",
+    "tags": [],
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    },
+    "properties": {}
+  }, {
+    "autofocus": false,
+    "input": true,
+    "tableView": true,
+    "label": "Sectors",
+    "key": "sectors",
+    "values": [{
+      "value": "finance",
+      "label": "Finance",
+      "shortcut": ""
+    }, {
+      "value": "chemicals",
+      "label": "Chemicals",
+      "shortcut": ""
+    }, {
+      "value": "civilNuclear",
+      "label": "Civil Nuclear",
+      "shortcut": ""
+    }, {
+      "value": "communications",
+      "label": "Communications",
+      "shortcut": ""
+    }, {
+      "value": "energy",
+      "label": "Energy",
+      "shortcut": ""
+    }, {
+      "value": "food",
+      "label": "Food",
+      "shortcut": ""
+    }, {
+      "value": "space",
+      "label": "Space",
+      "shortcut": ""
+    }, {
+      "value": "transport",
+      "label": "Transport",
+      "shortcut": ""
+    }, {
+      "value": "water",
+      "label": "Water",
+      "shortcut": ""
+    }, {
+      "value": "others",
+      "label": "Other(s)",
+      "shortcut": ""
+    }],
+    "inline": false,
+    "protected": false,
+    "persistent": true,
+    "hidden": false,
+    "clearOnHide": true,
+    "validate": {
+      "required": true
+    },
+    "type": "selectboxes",
+    "labelPosition": "top",
+    "optionsLabelPosition": "right",
+    "conditional": {
+      "show": "",
+      "when": null,
+      "eq": ""
+    }
+  }, {
+    "autofocus": false,
+    "input": true,
+    "tableView": true,
+    "inputType": "text",
+    "inputMask": "",
+    "label": "Additional Sectors",
+    "key": "additionalSectors",
+    "placeholder": "",
+    "prefix": "",
+    "suffix": "",
+    "multiple": true,
+    "defaultValue": "",
+    "protected": false,
+    "unique": false,
+    "persistent": true,
+    "hidden": false,
+    "clearOnHide": true,
+    "spellcheck": true,
+    "validate": {
+      "required": true,
+      "minLength": "",
+      "maxLength": "",
+      "pattern": "",
+      "custom": "",
+      "customPrivate": false
+    },
+    "conditional": {
+      "show": "true",
+      "when": "sectors",
+      "eq": "others"
+    },
+    "type": "textfield",
+    "labelPosition": "top",
+    "tags": [],
+    "properties": {}
+  }, {
+    "autofocus": false,
+    "input": true,
+    "label": "Submit",
+    "tableView": false,
+    "key": "submit",
+    "size": "md",
+    "leftIcon": "",
+    "rightIcon": "",
+    "block": false,
+    "action": "submit",
+    "disableOnInvalid": false,
+    "theme": "primary",
+    "type": "button"
+  }],
+  "display": "form",
+  "submissionAccess": [{
+    "roles": ["authenticated"],
+    "type": "create_own"
+  }, {
+    "roles": ["authenticated"],
+    "type": "read_own"
+  }, {
+    "roles": ["authenticated"],
+    "type": "update_own"
+  }, {
+    "roles": ["authenticated"],
+    "type": "delete_own"
+  }],
+  "title": "MemberOrg",
+  "name": "memberOrg",
+  "path": "member-org",
+  "access": [{
+    "roles": ["administrator", "authenticated", "anonymous"],
+    "type": "read_all"
+  }]
+}
+  }
+}
+
