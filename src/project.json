@@ -225,41 +225,40 @@
   "deleted": null,
   "owner": null,
   "components": [{
-    "key": "content",
-    "label": "Content",
-    "input": false,
-    "tag": "p",
-    "attrs": [{
-      "value": "",
-      "attr": ""
-    }],
-    "className": "",
-    "content": "<div style=\"font-size: 18px\">\n<p>Lead Contact - User details (this must be the individual completing this form)</p>\n<ul>\n<li>Name</li>\n<li>Email</li>\n<li>Role</li>\n</ul>\n</div>",
-    "type": "htmlelement",
-    "hideLabel": true,
-    "tags": [],
-    "conditional": {
-      "show": "",
-      "when": null,
-      "eq": ""
-    },
-    "properties": {},
-    "customClass": "title"
-  }, {
     "clearOnHide": false,
-    "key": "panel",
+    "key": "panel5",
     "input": false,
-    "title": "Organisation Details",
+    "title": "Lead Contact",
     "theme": "default",
     "tableView": false,
     "components": [{
+      "key": "panel5Content",
+      "label": "Content",
+      "input": false,
+      "tag": "p",
+      "attrs": [{
+        "value": "",
+        "attr": ""
+      }],
+      "className": "",
+      "content": "<p>User details (this much be the individual completing this form)",
+      "type": "htmlelement",
+      "hideLabel": true,
+      "tags": [],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {}
+    }, {
       "autofocus": false,
       "input": true,
       "tableView": true,
       "inputType": "text",
       "inputMask": "",
       "label": "Name",
-      "key": "panelOrganisationName",
+      "key": "panel5Name",
       "placeholder": "",
       "prefix": "",
       "suffix": "",
@@ -277,8 +276,7 @@
         "maxLength": "",
         "pattern": "",
         "custom": "",
-        "customPrivate": false,
-        "customMessage": "This is a required field"
+        "customPrivate": false
       },
       "conditional": {
         "show": "",
@@ -293,18 +291,19 @@
       "autofocus": false,
       "input": true,
       "tableView": true,
-      "label": "Address",
-      "key": "panelAddress2",
+      "inputType": "text",
+      "inputMask": "",
+      "label": "Email",
+      "key": "panel5Email",
       "placeholder": "",
       "prefix": "",
       "suffix": "",
-      "rows": 3,
       "multiple": false,
       "defaultValue": "",
       "protected": false,
+      "unique": false,
       "persistent": true,
       "hidden": false,
-      "wysiwyg": false,
       "clearOnHide": true,
       "spellcheck": true,
       "validate": {
@@ -312,48 +311,54 @@
         "minLength": "",
         "maxLength": "",
         "pattern": "",
-        "custom": ""
+        "custom": "",
+        "customPrivate": false
       },
-      "type": "textarea",
-      "labelPosition": "top",
-      "tags": [],
       "conditional": {
         "show": "",
         "when": null,
         "eq": ""
       },
+      "type": "textfield",
+      "labelPosition": "top",
+      "tags": [],
       "properties": {}
     }, {
       "autofocus": false,
       "input": true,
       "tableView": true,
-      "inputType": "tel",
+      "inputType": "text",
       "inputMask": "",
-      "label": "Telephone number",
-      "key": "panelTelephonenumber",
+      "label": "Role",
+      "key": "panel5Role",
       "placeholder": "",
       "prefix": "",
       "suffix": "",
       "multiple": false,
+      "defaultValue": "",
       "protected": false,
       "unique": false,
       "persistent": true,
       "hidden": false,
-      "defaultValue": "",
       "clearOnHide": true,
+      "spellcheck": true,
       "validate": {
-        "required": true
+        "required": true,
+        "minLength": "",
+        "maxLength": "",
+        "pattern": "",
+        "custom": "",
+        "customPrivate": false
       },
-      "type": "phoneNumber",
-      "labelPosition": "top",
-      "tags": [],
       "conditional": {
         "show": "",
         "when": null,
         "eq": ""
       },
-      "properties": {},
-      "errorLabel": "Organisation phone number"
+      "type": "textfield",
+      "labelPosition": "top",
+      "tags": [],
+      "properties": {}
     }],
     "type": "panel",
     "breadcrumb": "default",
@@ -365,8 +370,9 @@
       "eq": ""
     },
     "properties": {},
-    "label": "panel"
-  }, {
+    "label": "panel5"
+  },
+   {
     "clearOnHide": false,
     "key": "panel2",
     "input": false,
@@ -554,26 +560,57 @@
         "when": null,
         "eq": ""
       }
-    }, {
-      "key": "panel6Content",
-      "label": "Content",
-      "input": false,
-      "tag": "p",
-      "attrs": [{
-        "value": "",
-        "attr": ""
+    },  {
+      "autofocus": false,
+      "input": true,
+      "tableView": true,
+      "label": "If you are a member of an existing NCSC assurance scheme, please select the following scheme(s) you are a member of:",
+      "key": "panel6IfyouareamemberofanexistingNcsCassuranceschemepleaseselectthefollowingschemesyouareamemberof",
+      "values": [{
+        "value": "certifiedCyberSecurityConsultants",
+        "label": "Certified Cyber Security Consultants",
+        "shortcut": ""
+      }, {
+        "value": "penetrationTesting",
+        "label": "Penetration testing",
+        "shortcut": ""
+      }, {
+        "value": "cyberIncidents",
+        "label": "Cyber Incidents",
+        "shortcut": ""
+      }, {
+        "value": "tailoredEvaluation",
+        "label": "Tailored Evaluation",
+        "shortcut": ""
+      }, {
+        "value": "tempestAndElectromagneticSecurity",
+        "label": "TEMPEST and Electromagnetic Security",
+        "shortcut": ""
       }],
-      "className": "",
-      "content": "<div style=\"font-size: 18px\">\n<p>If you are a member of an existing NCSC assurance scheme, please select the following scheme(s) you are a member of:</p>\n<ul>\n<li>Certified Cyber Security Consultants</li>\n<li>Penetration testing</li>\n<li>Cyber Incidents</li>\n<li>Tailored Evaluation</li>\n</ul>\n</div>",
-      "type": "htmlelement",
-      "hideLabel": true,
-      "tags": [],
+      "inline": false,
+      "protected": false,
+      "persistent": true,
+      "hidden": false,
+      "clearOnHide": true,
+      "validate": {
+        "required": false
+      },
+      "type": "selectboxes",
+      "labelPosition": "top",
+      "optionsLabelPosition": "right",
       "conditional": {
         "show": "",
         "when": null,
         "eq": ""
       },
-      "properties": {}
+      "labelWidth": 30,
+      "labelMargin": 3,
+      "fieldSet": false,
+      "dataGridLabel": false,
+      "style": {
+        "margin-right": "0px",
+        "margin-left": "0px"
+      }
     }],
     "type": "panel",
     "breadcrumb": "default",
@@ -3029,4 +3066,3 @@
 }
   }
 }
-
