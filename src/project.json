@@ -219,511 +219,150 @@
         }
       ]
     },
-"cniSupplier": {
-  "type": "form",
-  "tags": ["common"],
-  "deleted": null,
-  "owner": null,
-  "components": [{
-    "clearOnHide": false,
-    "key": "panel5",
-    "input": false,
-    "title": "Lead Contact",
-    "theme": "default",
-    "tableView": false,
-    "components": [{
-      "key": "panel5Content",
-      "label": "Content",
-      "input": false,
-      "tag": "p",
-      "attrs": [{
-        "value": "",
-        "attr": ""
-      }],
-      "className": "",
-      "content": "<p>User details (this much be the individual completing this form)",
-      "type": "htmlelement",
-      "hideLabel": true,
-      "tags": [],
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "properties": {}
-    }, {
-      "autofocus": false,
-      "input": true,
-      "tableView": true,
-      "inputType": "text",
-      "inputMask": "",
-      "label": "Name",
-      "key": "panel5Name",
-      "placeholder": "",
-      "prefix": "",
-      "suffix": "",
-      "multiple": false,
-      "defaultValue": "",
-      "protected": false,
-      "unique": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "spellcheck": true,
-      "validate": {
-        "required": true,
-        "minLength": "",
-        "maxLength": "",
-        "pattern": "",
-        "custom": "",
-        "customPrivate": false
-      },
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "type": "textfield",
-      "labelPosition": "top",
-      "tags": [],
-      "properties": {}
-    }, {
-      "autofocus": false,
-      "input": true,
-      "tableView": true,
-      "inputType": "text",
-      "inputMask": "",
-      "label": "Email",
-      "key": "panel5Email",
-      "placeholder": "",
-      "prefix": "",
-      "suffix": "",
-      "multiple": false,
-      "defaultValue": "",
-      "protected": false,
-      "unique": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "spellcheck": true,
-      "validate": {
-        "required": true,
-        "minLength": "",
-        "maxLength": "",
-        "pattern": "",
-        "custom": "",
-        "customPrivate": false
-      },
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "type": "textfield",
-      "labelPosition": "top",
-      "tags": [],
-      "properties": {}
-    }, {
-      "autofocus": false,
-      "input": true,
-      "tableView": true,
-      "inputType": "text",
-      "inputMask": "",
-      "label": "Role",
-      "key": "panel5Role",
-      "placeholder": "",
-      "prefix": "",
-      "suffix": "",
-      "multiple": false,
-      "defaultValue": "",
-      "protected": false,
-      "unique": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "spellcheck": true,
-      "validate": {
-        "required": true,
-        "minLength": "",
-        "maxLength": "",
-        "pattern": "",
-        "custom": "",
-        "customPrivate": false
-      },
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "type": "textfield",
-      "labelPosition": "top",
-      "tags": [],
-      "properties": {}
-    }],
-    "type": "panel",
-    "breadcrumb": "default",
-    "hideLabel": true,
-    "tags": [],
-    "conditional": {
-      "show": "",
-      "when": null,
-      "eq": ""
-    },
-    "properties": {},
-    "label": "panel5"
-  }, {
-    "clearOnHide": false,
-    "key": "panel2",
-    "input": false,
-    "title": "Organisation information",
-    "theme": "default",
-    "tableView": false,
-    "components": [{
-      "autofocus": false,
-      "input": true,
-      "tableView": true,
-      "label": "Organisation overview",
-      "key": "panel2Organisationoverview",
-      "placeholder": "",
-      "prefix": "",
-      "suffix": "",
-      "rows": 3,
-      "multiple": false,
-      "defaultValue": "",
-      "protected": false,
-      "persistent": true,
-      "hidden": false,
-      "wysiwyg": false,
-      "clearOnHide": true,
-      "spellcheck": true,
-      "validate": {
-        "required": true,
-        "minLength": "",
-        "maxLength": "",
-        "pattern": "",
-        "custom": "",
-        "customMessage": "This field is needed to populate your entry in the directory"
-      },
-      "type": "textarea",
-      "labelPosition": "top",
-      "tags": [],
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "properties": {}
-    }, {
-      "autofocus": false,
-      "input": true,
-      "tableView": true,
-      "inputType": "text",
-      "inputMask": "",
-      "label": "Website link",
-      "key": "panel2Websiteaddress",
-      "placeholder": "",
-      "prefix": "",
-      "suffix": "",
-      "multiple": false,
-      "defaultValue": "",
-      "protected": false,
-      "unique": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "spellcheck": true,
-      "validate": {
-        "required": true,
-        "minLength": "",
-        "maxLength": "",
-        "pattern": "",
-        "custom": "",
-        "customPrivate": false,
-        "customMessage": "This field lets users get to your organisation's website to establish who you are"
-      },
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "type": "textfield",
-      "labelPosition": "top",
-      "tags": [],
-      "properties": {}
-    }, {
-      "autofocus": false,
-      "input": true,
-      "tableView": true,
-      "label": "Organisation Logo (images only, 5MB maximum size)",
-      "key": "panel2Organisationlogo",
-      "image": false,
-      "imageSize": "200",
-      "placeholder": "",
-      "multiple": false,
-      "defaultValue": "",
-      "protected": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "filePattern": "image/*",
-      "fileMinSize": "0KB",
-      "fileMaxSize": "5MB",
-      "type": "file",
-      "labelPosition": "top",
-      "tags": [],
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "properties": {},
-      "storage": "base64",
-      "validate": {
-        "customMessage": ""
-      }
-    }],
-    "type": "panel",
-    "breadcrumb": "default",
-    "hideLabel": true,
-    "tags": [],
-    "conditional": {
-      "show": "",
-      "when": null,
-      "eq": ""
-    },
-    "properties": {},
-    "label": "panel2"
-  }, {
-    "clearOnHide": false,
-    "key": "panel6",
-    "input": false,
-    "title": "Sector Experience",
-    "theme": "default",
-    "tableView": false,
-    "components": [{
-      "autofocus": false,
-      "input": true,
-      "tableView": true,
-      "label": "What sectors do you work with?",
-      "key": "panel6Whatsectorsdoyouworkwith2",
-      "values": [{
-        "value": "chemicals",
-        "label": "Chemicals",
-        "shortcut": ""
-      }, {
-        "value": "communications",
-        "label": "Communications",
-        "shortcut": ""
-      }, {
-        "value": "civilNuclear",
-        "label": "Civil Nuclear",
-        "shortcut": ""
-      }, {
-        "value": "energy",
-        "label": "Energy",
-        "shortcut": ""
-      }, {
-        "value": "finance",
-        "label": "Finance",
-        "shortcut": ""
-      }, {
-        "value": "food",
-        "label": "Food",
-        "shortcut": ""
-      }, {
-        "value": "space",
-        "label": "Space",
-        "shortcut": ""
-      }, {
-        "value": "transport",
-        "label": "Transport",
-        "shortcut": ""
-      }, {
-        "value": "water",
-        "label": "Water",
-        "shortcut": ""
-      }],
-      "inline": false,
-      "protected": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "validate": {
-        "required": false
-      },
-      "type": "selectboxes",
-      "labelPosition": "top",
-      "optionsLabelPosition": "right",
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      }
-    },  {
-      "autofocus": false,
-      "input": true,
-      "tableView": true,
-      "label": "If you are a member of an existing NCSC assurance scheme, please select the following scheme(s) you are a member of:",
-      "key": "panel6IfyouareamemberofanexistingNcsCassuranceschemepleaseselectthefollowingschemesyouareamemberof",
-      "values": [{
-        "value": "certifiedCyberSecurityConsultants",
-        "label": "Certified Cyber Security Consultants",
-        "shortcut": ""
-      }, {
-        "value": "penetrationTesting",
-        "label": "Penetration testing",
-        "shortcut": ""
-      }, {
-        "value": "cyberIncidents",
-        "label": "Cyber Incidents",
-        "shortcut": ""
-      }, {
-        "value": "tailoredEvaluation",
-        "label": "Tailored Evaluation",
-        "shortcut": ""
-      }, {
-        "value": "tempestAndElectromagneticSecurity",
-        "label": "TEMPEST and Electromagnetic Security",
-        "shortcut": ""
-      }],
-      "inline": false,
-      "protected": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "validate": {
-        "required": false
-      },
-      "type": "selectboxes",
-      "labelPosition": "top",
-      "optionsLabelPosition": "right",
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "labelWidth": 30,
-      "labelMargin": 3,
-      "fieldSet": false,
-      "dataGridLabel": false,
-      "style": {
-        "margin-right": "0px",
-        "margin-left": "0px"
-      }
-    }],
-    "type": "panel",
-    "breadcrumb": "default",
-    "tags": [],
-    "conditional": {
-      "show": "",
-      "when": null,
-      "eq": ""
-    },
-    "properties": {},
-    "label": "panel6",
-    "inDataGrid": true,
-    "hideLabel": true
-  }, {
-    "clearOnHide": false,
-    "key": "panel3",
-    "input": false,
-    "title": "Service & Expertise",
-    "theme": "default",
-    "tableView": false,
-    "components": [{
-      "autofocus": false,
-      "input": true,
-      "tree": true,
+    "cniSupplier": {
+      "type": "form",
+      "tags": ["common"],
+      "deleted": null,
+      "owner": null,
       "components": [{
-        "autofocus": false,
-        "input": true,
-        "tableView": true,
-        "label": "A: Managing Security Risk",
-        "key": "panel3DataGridManagingSecurityRisk",
-        "placeholder": "",
-        "data": {
-          "values": [{
-            "value": "a1GovernanceConsultancy",
-            "label": "A1: Governance - Consultancy"
-          }, {
-            "value": "a1GovernanceResearch",
-            "label": "A1: Governance - Research"
-          }, {
-            "value": "a1GovernanceTraining",
-            "label": "A1: Governance - Training"
-          }, {
-            "value": "a2RiskManagementConsultancy",
-            "label": "A2: Risk Management - Consultancy"
-          }, {
-            "value": "a2RiskManagementResearch",
-            "label": "A2: Risk Management - Research"
-          }, {
-            "value": "a2RiskManagementTools",
-            "label": "A2: Risk Management - Tools"
-          }, {
-            "value": "a2RiskManagementTraining",
-            "label": "A2: Risk Management - Training"
-          }, {
-            "value": "a3AssetManagementConsultancy",
-            "label": "A3: Asset Management - Consultancy"
-          }, {
-            "value": "a3AssetManagementResearch",
-            "label": "A3: Asset Management - Research"
-          }, {
-            "value": "a3AssetManagementTools",
-            "label": "A3: Asset Management - Tools"
-          }, {
-            "value": "a3AssetManagementTraining",
-            "label": "A3: Asset Management - Training"
-          }, {
-            "value": "a4SupplyChainConsultancy",
-            "label": "A4: Supply Chain - Consultancy"
-          }, {
-            "value": "a4SupplyChainResearch",
-            "label": "A4: Supply Chain - Research"
-          }, {
-            "value": "a4SupplyChainTools",
-            "label": "A4: Supply Chain - Tools"
-          }, {
-            "value": "a4SupplyChainTraining",
-            "label": "A4: Supply Chain - Training"
+        "clearOnHide": false,
+        "key": "panel5",
+        "input": false,
+        "title": "Lead Contact",
+        "theme": "default",
+        "tableView": false,
+        "components": [{
+          "key": "panel5Content",
+          "label": "Content",
+          "input": false,
+          "tag": "p",
+          "attrs": [{
+            "value": "",
+            "attr": ""
           }],
-          "url": "",
-          "resource": "",
-          "custom": "",
-          "json": [{
-            "label": "Risk assessment",
-            "value": "risk-assessment"
-          }, {
-            "label": "Governance compliance",
-            "value": "governance-compliance"
-          }, {
-            "label": "Regulatory compliance",
-            "value": "regulatory-compliance"
-          }, {
-            "label": "Research",
-            "value": "research"
-          }]
-        },
-        "dataSrc": "values",
-        "valueProperty": "value",
-        "defaultValue": "",
-        "refreshOn": "",
-        "filter": "",
-        "authenticate": false,
-        "template": "<span>{{ item.label }}</span>",
-        "multiple": false,
-        "protected": false,
-        "unique": false,
-        "persistent": true,
-        "hidden": false,
-        "clearOnHide": true,
-        "validate": {
-          "required": false
-        },
-        "type": "select",
-        "inDataGrid": true,
-        "labelPosition": "top",
+          "className": "",
+          "content": "<p>User details (this much be the individual completing this form)",
+          "type": "htmlelement",
+          "hideLabel": true,
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "properties": {}
+        }, {
+          "autofocus": false,
+          "input": true,
+          "tableView": true,
+          "inputType": "text",
+          "inputMask": "",
+          "label": "Name",
+          "key": "panel5Name",
+          "placeholder": "",
+          "prefix": "",
+          "suffix": "",
+          "multiple": false,
+          "defaultValue": "",
+          "protected": false,
+          "unique": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "spellcheck": true,
+          "validate": {
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "pattern": "",
+            "custom": "",
+            "customPrivate": false
+          },
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "type": "textfield",
+          "labelPosition": "top",
+          "tags": [],
+          "properties": {}
+        }, {
+          "autofocus": false,
+          "input": true,
+          "tableView": true,
+          "inputType": "text",
+          "inputMask": "",
+          "label": "Email",
+          "key": "panel5Email",
+          "placeholder": "",
+          "prefix": "",
+          "suffix": "",
+          "multiple": false,
+          "defaultValue": "",
+          "protected": false,
+          "unique": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "spellcheck": true,
+          "validate": {
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "pattern": "",
+            "custom": "",
+            "customPrivate": false
+          },
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "type": "textfield",
+          "labelPosition": "top",
+          "tags": [],
+          "properties": {}
+        }, {
+          "autofocus": false,
+          "input": true,
+          "tableView": true,
+          "inputType": "text",
+          "inputMask": "",
+          "label": "Role",
+          "key": "panel5Role",
+          "placeholder": "",
+          "prefix": "",
+          "suffix": "",
+          "multiple": false,
+          "defaultValue": "",
+          "protected": false,
+          "unique": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "spellcheck": true,
+          "validate": {
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "pattern": "",
+            "custom": "",
+            "customPrivate": false
+          },
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "type": "textfield",
+          "labelPosition": "top",
+          "tags": [],
+          "properties": {}
+        }],
+        "type": "panel",
+        "breadcrumb": "default",
+        "hideLabel": true,
         "tags": [],
         "conditional": {
           "show": "",
@@ -731,511 +370,249 @@
           "eq": ""
         },
         "properties": {},
-        "customClass": "fixed-fayt"
-      }],
-      "tableView": true,
-      "label": "A: Managing Security Risk",
-      "key": "panel3DataGrid",
-      "protected": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "type": "datagrid",
-      "addAnotherPosition": "bottom",
-      "tags": [],
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "properties": {},
-      "hideLabel": true,
-      "validate": {
-        "minLength": 1,
-        "maxLength": 100
-      },
-      "isNew": false
-    }, {
-      "autofocus": false,
-      "input": true,
-      "tree": true,
-      "components": [{
-        "autofocus": false,
-        "input": true,
-        "tableView": true,
-        "label": "B: Protecting Against Cyber Attack",
-        "key": "panel3DataGrid2ProtectingSystemsAgainstCyberAttack",
-        "placeholder": "",
-        "data": {
+        "label": "panel5"
+      }, {
+        "clearOnHide": false,
+        "key": "panel2",
+        "input": false,
+        "title": "Organisation information",
+        "theme": "default",
+        "tableView": false,
+        "components": [{
+          "autofocus": false,
+          "input": true,
+          "tableView": true,
+          "label": "Organisation overview",
+          "key": "panel2Organisationoverview",
+          "placeholder": "",
+          "prefix": "",
+          "suffix": "",
+          "rows": 3,
+          "multiple": false,
+          "defaultValue": "",
+          "protected": false,
+          "persistent": true,
+          "hidden": false,
+          "wysiwyg": false,
+          "clearOnHide": true,
+          "spellcheck": true,
+          "validate": {
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "pattern": "",
+            "custom": "",
+            "customMessage": "This field is needed to populate your entry in the directory"
+          },
+          "type": "textarea",
+          "labelPosition": "top",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "properties": {}
+        }, {
+          "autofocus": false,
+          "input": true,
+          "tableView": true,
+          "inputType": "text",
+          "inputMask": "",
+          "label": "Website link",
+          "key": "panel2Websiteaddress",
+          "placeholder": "",
+          "prefix": "",
+          "suffix": "",
+          "multiple": false,
+          "defaultValue": "",
+          "protected": false,
+          "unique": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "spellcheck": true,
+          "validate": {
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "pattern": "",
+            "custom": "",
+            "customPrivate": false,
+            "customMessage": "This field lets users get to your organisation's website to establish who you are"
+          },
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "type": "textfield",
+          "labelPosition": "top",
+          "tags": [],
+          "properties": {}
+        }, {
+          "autofocus": false,
+          "input": true,
+          "tableView": true,
+          "label": "Organisation Logo (images only, 5MB maximum size)",
+          "key": "panel2Organisationlogo",
+          "image": false,
+          "imageSize": "200",
+          "placeholder": "",
+          "multiple": false,
+          "defaultValue": "",
+          "protected": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "filePattern": "image/*",
+          "fileMinSize": "0KB",
+          "fileMaxSize": "5MB",
+          "type": "file",
+          "labelPosition": "top",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "properties": {},
+          "storage": "base64",
+          "validate": {
+            "customMessage": ""
+          }
+        }],
+        "type": "panel",
+        "breadcrumb": "default",
+        "hideLabel": true,
+        "tags": [],
+        "conditional": {
+          "show": "",
+          "when": null,
+          "eq": ""
+        },
+        "properties": {},
+        "label": "panel2"
+      }, {
+        "clearOnHide": false,
+        "key": "panel6",
+        "input": false,
+        "title": "Sector Experience",
+        "theme": "default",
+        "tableView": false,
+        "components": [{
+          "autofocus": false,
+          "input": true,
+          "tableView": true,
+          "label": "What sectors do you work with?",
+          "key": "panel6Whatsectorsdoyouworkwith2",
           "values": [{
-            "value": "b1ServiceProtectionPoliciesAndProcessesConsultancy",
-            "label": "B1: Service Protection Policies and Processes - Consultancy"
+            "value": "chemicals",
+            "label": "Chemicals",
+            "shortcut": ""
           }, {
-            "value": "b1ServiceProtectionPoliciesAndProcessesResearch",
-            "label": "B1: Service Protection Policies and Processes - Research"
+            "value": "communications",
+            "label": "Communications",
+            "shortcut": ""
           }, {
-            "value": "b1ServiceProtectionPoliciesAndProcessesTraining",
-            "label": "B1: Service Protection Policies and Processes - Training"
+            "value": "civilNuclear",
+            "label": "Civil Nuclear",
+            "shortcut": ""
           }, {
-            "value": "b2IdentityAndAccessControlConsultancy",
-            "label": "B2: Identity and Access Control - Consultancy"
+            "value": "energy",
+            "label": "Energy",
+            "shortcut": ""
           }, {
-            "value": "b2IdentityAndAccessControlResearch",
-            "label": "B2: Identity and Access Control - Research"
+            "value": "finance",
+            "label": "Finance",
+            "shortcut": ""
           }, {
-            "value": "b2IdentityAndAccessControlTools",
-            "label": "B2: Identity and Access Control - Tools"
+            "value": "food",
+            "label": "Food",
+            "shortcut": ""
           }, {
-            "value": "b2IdentityAndAccessControlTraining",
-            "label": "B2: Identity and Access Control - Training"
+            "value": "space",
+            "label": "Space",
+            "shortcut": ""
           }, {
-            "value": "b3DataSecurityConsultancy",
-            "label": "B3: Data Security - Consultancy"
+            "value": "transport",
+            "label": "Transport",
+            "shortcut": ""
           }, {
-            "value": "b3DataSecurityResearch",
-            "label": "B3: Data Security - Research"
-          }, {
-            "value": "b3DataSecurityTools",
-            "label": "B3: Data Security - Tools"
-          }, {
-            "value": "b3DataSecurityTraining",
-            "label": "B3: Data Security - Training"
-          }, {
-            "value": "b4SystemSecurityConsultancy",
-            "label": "B4: System Security - Consultancy"
-          }, {
-            "value": "b4SystemSecurityResearch",
-            "label": "B4: System Security - Research"
-          }, {
-            "value": "b4SystemSecurityTools",
-            "label": "B4: System Security - Tools"
-          }, {
-            "value": "b4SystemSecurityTraining",
-            "label": "B4: System Security - Training"
-          }, {
-            "value": "b5ResilientNetworksAndSystemsConsultancy",
-            "label": "B5: Resilient Networks and Systems - Consultancy"
-          }, {
-            "value": "b5ResilientNetworksAndSystemsResearch",
-            "label": "B5: Resilient Networks and Systems - Research"
-          }, {
-            "value": "b5ResilientNetworksAndSystemsTools",
-            "label": "B5: Resilient Networks and Systems - Tools"
-          }, {
-            "value": "b5ResilientNetworksAndSystemsTraining",
-            "label": "B5: Resilient Networks and Systems - Training"
-          }, {
-            "value": "b6StaffAwarenessAndTrainingConsultancy",
-            "label": "B6: Staff Awareness and Training - Consultancy"
-          }, {
-            "value": "b6StaffAwarenessAndTrainingFacilities",
-            "label": "B6: Staff Awareness and Training - Facilities"
-          }, {
-            "value": "b6StaffAwarenessAndTrainingResearch",
-            "label": "B6: Staff Awareness and Training - Research"
-          }, {
-            "value": "b6StaffAwarenessAndTrainingTools",
-            "label": "B6: Staff Awareness and Training - Tools"
-          }, {
-            "value": "b6StaffAwarenessAndTrainingTraining",
-            "label": "B6: Staff Awareness and Training - Training"
+            "value": "water",
+            "label": "Water",
+            "shortcut": ""
           }],
-          "json": [{
-            "label": "Email security",
-            "value": "email-security"
+          "inline": false,
+          "protected": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "validate": {
+            "required": false
+          },
+          "type": "selectboxes",
+          "labelPosition": "top",
+          "optionsLabelPosition": "right",
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          }
+        },  {
+          "autofocus": false,
+          "input": true,
+          "tableView": true,
+          "label": "If you are a member of an existing NCSC assurance scheme, please select the following scheme(s) you are a member of:",
+          "key": "panel6IfyouareamemberofanexistingNcsCassuranceschemepleaseselectthefollowingschemesyouareamemberof",
+          "values": [{
+            "value": "certifiedCyberSecurityConsultants",
+            "label": "Certified Cyber Security Consultants",
+            "shortcut": ""
           }, {
-            "label": "Communications security",
-            "value": "communications-security"
-          }, {
-            "label": "Secure real time communications",
-            "value": "secure-real-time-communications"
-          }, {
-            "label": "Network security",
-            "value": "network-security"
-          }, {
-            "label": "Virtual Private Network",
-            "value": "virtual-private-network"
-          }, {
-            "label": "IPSec security gateway",
-            "value": "ipsec-security-gateway"
-          }, {
-            "label": "Telecommunications",
-            "value": "telecommunications"
-          }, {
-            "label": "Disk encryption",
-            "value": "disk-encryption"
-          }, {
-            "label": "Data encryption",
-            "value": "data-encryption"
-          }, {
-            "label": "Data at rest encryption",
-            "value": "data-at-rest-encryption"
-          }, {
-            "label": "Email encryption",
-            "value": "email-encryption"
-          }, {
-            "label": "PKI Security",
-            "value": "pki-security"
-          }, {
-            "label": "Remote desktop",
-            "value": "remote-desktop"
-          }, {
-            "label": "Mobile device management",
-            "value": "mobile-device-management"
-          }, {
-            "label": "Device security",
-            "value": "device-security"
-          }, {
-            "label": "Sanitisation services",
-            "value": "sanitisation-services"
-          }, {
-            "label": "Sanitisation products",
-            "value": "sanitisation-products"
-          }, {
-            "label": "Public awareness",
-            "value": "public-awareness"
-          }, {
-            "label": "Human factors",
-            "value": "human-factors"
-          }, {
-            "label": "Corporate awareness",
-            "value": "corporate-awareness"
-          }, {
-            "label": "Incident response training",
-            "value": "incident-response-training"
-          }, {
-            "label": "Cyber exercise services",
-            "value": "cyber-exercise-services"
-          }, {
-            "label": "Cyber range exercising",
-            "value": "cyber-range-exercising"
-          }, {
+            "value": "penetrationTesting",
             "label": "Penetration testing",
-            "value": "penetration-testing"
+            "shortcut": ""
           }, {
-            "label": "Industrial Control System testbed",
-            "value": "industrial-control-system-testbed"
-          }, {
-            "label": "TEMPEST & Electromagnetic Security (EMC)",
-            "value": "tempest-&-electromagnetic-security-(emc)"
-          }, {
-            "label": "TEMPEST product vendor",
-            "value": "tempest-product-vendor"
-          }, {
-            "label": "Secure hosting",
-            "value": "secure-hosting"
-          }, {
-            "label": "Web security",
-            "value": "web-security"
-          }, {
-            "label": "Virtual security architecture & assessment",
-            "value": "virtual-security-architecture-&-assessment"
-          }, {
-            "label": "DDoS protection",
-            "value": "ddos-protection"
-          }, {
-            "label": "Security engineering",
-            "value": "security-engineering"
-          }, {
-            "label": "Software execution control",
-            "value": "software-execution-control"
-          }, {
-            "label": "Network hardening",
-            "value": "network-hardening"
-          }, {
-            "label": "Penetration testing",
-            "value": "penetration-testing"
-          }, {
-            "label": "IPSec VPN client",
-            "value": "ipsec-vpn-client"
-          }, {
-            "label": "Airwave",
-            "value": "airwave"
-          }, {
-            "label": "Access control devices & systems",
-            "value": "access-control-devices-&-systems"
-          }, {
-            "label": "Cloud security",
-            "value": "cloud-security"
-          }, {
-            "label": "Security Operations Centre (SOC) consulting",
-            "value": "security-operations-centre-(soc)-consulting"
-          }, {
-            "label": "Firewall",
-            "value": "firewall"
-          }],
-          "url": "",
-          "resource": "",
-          "custom": ""
-        },
-        "dataSrc": "values",
-        "valueProperty": "value",
-        "defaultValue": "",
-        "refreshOn": "",
-        "filter": "",
-        "authenticate": false,
-        "template": "<span>{{ item.label }}</span>",
-        "multiple": false,
-        "protected": false,
-        "unique": false,
-        "persistent": true,
-        "hidden": false,
-        "clearOnHide": true,
-        "validate": {
-          "required": false
-        },
-        "type": "select",
-        "inDataGrid": true,
-        "labelPosition": "top",
-        "tags": [],
-        "conditional": {
-          "show": "",
-          "when": null,
-          "eq": ""
-        },
-        "properties": {},
-        "customClass": "fixed-fayt"
-      }],
-      "tableView": true,
-      "label": "Protecting Systems Against Cyber Attack",
-      "key": "panel3DataGrid2",
-      "protected": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "type": "datagrid",
-      "addAnotherPosition": "bottom",
-      "tags": [],
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "properties": {},
-      "hideLabel": true,
-      "validate": {
-        "maxLength": 100,
-        "customMessage": "",
-        "minLength": 1
-      }
-    }, {
-      "autofocus": false,
-      "input": true,
-      "tree": true,
-      "components": [{
-        "autofocus": false,
-        "input": true,
-        "tableView": true,
-        "label": "C: Detecting Cyber Security Events",
-        "key": "panel3DataGrid3DetectingCyberSecuritythreats",
-        "placeholder": "",
-        "data": {
-          "values": [{
-            "value": "c1SecurityMonitoringConsultancy",
-            "label": "C1: Security Monitoring - Consultancy"
-          }, {
-            "value": "c1SecurityMonitoringResearch",
-            "label": "C1: Security Monitoring - Research"
-          }, {
-            "value": "c1SecurityMonitoringTools",
-            "label": "C1: Security Monitoring - Tools"
-          }, {
-            "value": "c1SecurityMonitoringTraining",
-            "label": "C1: Security Monitoring - Training"
-          }, {
-            "value": "c2ProactiveSecurityEventDiscoveryConsultancy",
-            "label": "C2: Proactive Security Event Discovery - Consultancy"
-          }, {
-            "value": "c2ProactiveSecurityEventDiscoveryResearch",
-            "label": "C2: Proactive Security Event Discovery - Research"
-          }, {
-            "value": "c2ProactiveSecurityEventDiscoveryTools",
-            "label": "C2: Proactive Security Event Discovery - Tools"
-          }, {
-            "value": "c2ProactiveSecurityEventDiscoveryTraining",
-            "label": "C2: Proactive Security Event Discovery - Training"
-          }],
-          "json": [{
-            "label": "Cyber intelligence analysis",
-            "value": "cyber-intelligence-analysis"
-          }, {
-            "label": "Network analysis",
-            "value": "network-analysis"
-          }, {
-            "label": "Cyber threat intelligence",
-            "value": "cyber-threat-intelligence"
-          }, {
-            "label": "Threat vulnerability",
-            "value": "threat-vulnerability"
-          }, {
-            "label": "Cyber defence analysis",
-            "value": "cyber-defence-analysis"
-          }, {
-            "label": "eDiscovery",
-            "value": "ediscovery"
-          }],
-          "url": "",
-          "resource": "",
-          "custom": ""
-        },
-        "dataSrc": "values",
-        "valueProperty": "value",
-        "defaultValue": "",
-        "refreshOn": "",
-        "filter": "",
-        "authenticate": false,
-        "template": "<span>{{ item.label }}</span>",
-        "multiple": false,
-        "protected": false,
-        "unique": false,
-        "persistent": true,
-        "hidden": false,
-        "clearOnHide": true,
-        "validate": {
-          "required": false
-        },
-        "type": "select",
-        "inDataGrid": true,
-        "labelPosition": "top",
-        "tags": [],
-        "conditional": {
-          "show": "",
-          "when": null,
-          "eq": ""
-        },
-        "properties": {},
-        "customClass": "fixed-fayt"
-      }],
-      "tableView": true,
-      "label": "Detecting Cyber Security threats",
-      "key": "panel3DataGrid3",
-      "protected": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "type": "datagrid",
-      "addAnotherPosition": "bottom",
-      "tags": [],
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "properties": {},
-      "hideLabel": true,
-      "validate": {
-        "maxLength": 100,
-        "minLength": 1
-      }
-    }, {
-      "autofocus": false,
-      "input": true,
-      "tree": true,
-      "components": [{
-        "autofocus": false,
-        "input": true,
-        "tableView": true,
-        "label": "D: Minimising the Impact of Cyber Security Incidents",
-        "key": "panel3DataGrid4Minimisingtheimpactofcybersecurityincidents",
-        "placeholder": "",
-        "data": {
-          "values": [{
-            "value": "d1ResponseAndRecoveryPlanningConsultancy",
-            "label": "D1: Response and Recovery Planning - Consultancy"
-          }, {
-            "value": "d1ResponseAndRecoveryPlanningFacilities",
-            "label": "D1: Response and Recovery Planning - Facilities"
-          }, {
-            "value": "d1ResponseAndRecoveryPlanningResearch",
-            "label": "D1: Response and Recovery Planning - Research"
-          }, {
-            "value": "d1ResponseAndRecoveryPlanningTools",
-            "label": "D1: Response and Recovery Planning - Tools"
-          }, {
-            "value": "d1ResponseAndRecoveryPlanningTraining",
-            "label": "D1: Response and Recovery Planning - Training"
-          }, {
-            "value": "d2LessonsLearnedConsultancy",
-            "label": "D2: Lessons Learned - Consultancy"
-          }, {
-            "value": "d2LessonsLearnedResearch",
-            "label": "D2: Lessons Learned - Research"
-          }, {
-            "value": "d2LessonsLearnedTraining",
-            "label": "D2: Lessons Learned - Training"
-          }],
-          "json": [{
-            "label": "Fraud identification",
-            "value": "fraud-identification"
-          }, {
+            "value": "cyberIncidents",
             "label": "Cyber Incidents",
-            "value": "cyber-incidents"
+            "shortcut": ""
           }, {
-            "label": "Cyber Security Consultancy",
-            "value": "cyber-security-consultancy"
+            "value": "tailoredEvaluation",
+            "label": "Tailored Evaluation",
+            "shortcut": ""
           }, {
-            "label": "Tailored evaluation",
-            "value": "tailored-evaluation"
-          }, {
-            "label": "Attack analysis",
-            "value": "attack-analysis"
-          }, {
-            "label": "Forensics",
-            "value": "forensics"
-          }, {
-            "label": "Cyber security operations",
-            "value": "cyber-security-operations"
-          }, {
-            "label": "Malware investigation",
-            "value": "malware-investigation"
-          }, {
-            "label": "Capability development",
-            "value": "capability-development"
-          }, {
-            "label": "Secure code reviews",
-            "value": "secure-code-reviews"
-          }, {
-            "label": "Cyber exercise services",
-            "value": "cyber-exercise-services"
-          }, {
-            "label": "Cyber range exercising",
-            "value": "cyber-range-exercising"
-          }, {
-            "label": "Penetration testing",
-            "value": "penetration-testing"
-          }, {
-            "label": "Industrial Control System testbed",
-            "value": "industrial-control-system-testbed"
-          }, {
-            "label": "TEMPEST & Electromagnetic Security (EMC)",
-            "value": "tempest-&-electromagnetic-security-(emc)"
-          }, {
-            "label": "TEMPEST product vendor",
-            "value": "tempest-product-vendor"
+            "value": "tempestAndElectromagneticSecurity",
+            "label": "TEMPEST and Electromagnetic Security",
+            "shortcut": ""
           }],
-          "url": "",
-          "resource": "",
-          "custom": ""
-        },
-        "dataSrc": "values",
-        "valueProperty": "value",
-        "defaultValue": "",
-        "refreshOn": "",
-        "filter": "",
-        "authenticate": false,
-        "template": "<span>{{ item.label }}</span>",
-        "multiple": false,
-        "protected": false,
-        "unique": false,
-        "persistent": true,
-        "hidden": false,
-        "clearOnHide": true,
-        "validate": {
-          "required": false
-        },
-        "type": "select",
-        "inDataGrid": true,
-        "labelPosition": "top",
+          "inline": false,
+          "protected": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "validate": {
+            "required": false
+          },
+          "type": "selectboxes",
+          "labelPosition": "top",
+          "optionsLabelPosition": "right",
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "labelWidth": 30,
+          "labelMargin": 3,
+          "fieldSet": false,
+          "dataGridLabel": false,
+          "style": {
+            "margin-right": "0px",
+            "margin-left": "0px"
+          }
+        }],
+        "type": "panel",
+        "breadcrumb": "default",
         "tags": [],
         "conditional": {
           "show": "",
@@ -1243,399 +620,1023 @@
           "eq": ""
         },
         "properties": {},
-        "customClass": "fixed-fayt"
-      }],
-      "tableView": true,
-      "label": "Minimising the impact of cyber security incidents",
-      "key": "panel3DataGrid4",
-      "protected": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "type": "datagrid",
-      "addAnotherPosition": "bottom",
-      "tags": [],
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "properties": {},
-      "validate": {
-        "minLength": 1,
-        "maxLength": 100
-      },
-      "hideLabel": true
-    }, {
-      "key": "panel3Content",
-      "label": "Content",
-      "input": false,
-      "tag": "div",
-      "attrs": [{
-        "value": "alert",
-        "attr": "role"
-      }],
-      "className": "alert alert-info",
-      "content": "Please use this area to input any type of offering you believe cannot be captured in the above list. Please associate your offering type using the most relevant NIS Objective where possible: e.g. A2: Risk Management - <my product type>. This box is to be used to capture a type of offering, so please keep the description of a similarly high level to ‘consultancy’, ‘tool’, ‘training’, ‘research’ or ‘facilities’.",
-      "type": "htmlelement",
-      "hideLabel": true,
-      "tags": [],
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "properties": {}
-    }, {
-      "autofocus": false,
-      "input": true,
-      "tree": true,
-      "components": [{
-        "autofocus": false,
-        "input": true,
-        "tableView": true,
-        "inputType": "text",
-        "inputMask": "",
-        "label": "Additional Products and Services",
-        "key": "panel3AdditionalProductsandServicesAdditionalProductsandServices",
-        "placeholder": "",
-        "prefix": "",
-        "suffix": "",
-        "multiple": false,
-        "defaultValue": "",
-        "protected": false,
-        "unique": false,
-        "persistent": true,
-        "hidden": false,
-        "clearOnHide": true,
-        "spellcheck": true,
-        "validate": {
-          "required": false,
-          "minLength": "",
-          "maxLength": "",
-          "pattern": "",
-          "custom": "",
-          "customPrivate": false
-        },
+        "label": "panel6",
+        "inDataGrid": true,
+        "hideLabel": true
+      }, {
+        "clearOnHide": false,
+        "key": "panel3",
+        "input": false,
+        "title": "Service & Expertise",
+        "theme": "default",
+        "tableView": false,
+        "components": [{
+          "autofocus": false,
+          "input": true,
+          "tree": true,
+          "components": [{
+            "autofocus": false,
+            "input": true,
+            "tableView": true,
+            "label": "A: Managing Security Risk",
+            "key": "panel3DataGridManagingSecurityRisk",
+            "placeholder": "",
+            "data": {
+              "values": [{
+                "value": "a1GovernanceConsultancy",
+                "label": "A1: Governance - Consultancy"
+              }, {
+                "value": "a1GovernanceResearch",
+                "label": "A1: Governance - Research"
+              }, {
+                "value": "a1GovernanceTraining",
+                "label": "A1: Governance - Training"
+              }, {
+                "value": "a2RiskManagementConsultancy",
+                "label": "A2: Risk Management - Consultancy"
+              }, {
+                "value": "a2RiskManagementResearch",
+                "label": "A2: Risk Management - Research"
+              }, {
+                "value": "a2RiskManagementTools",
+                "label": "A2: Risk Management - Tools"
+              }, {
+                "value": "a2RiskManagementTraining",
+                "label": "A2: Risk Management - Training"
+              }, {
+                "value": "a3AssetManagementConsultancy",
+                "label": "A3: Asset Management - Consultancy"
+              }, {
+                "value": "a3AssetManagementResearch",
+                "label": "A3: Asset Management - Research"
+              }, {
+                "value": "a3AssetManagementTools",
+                "label": "A3: Asset Management - Tools"
+              }, {
+                "value": "a3AssetManagementTraining",
+                "label": "A3: Asset Management - Training"
+              }, {
+                "value": "a4SupplyChainConsultancy",
+                "label": "A4: Supply Chain - Consultancy"
+              }, {
+                "value": "a4SupplyChainResearch",
+                "label": "A4: Supply Chain - Research"
+              }, {
+                "value": "a4SupplyChainTools",
+                "label": "A4: Supply Chain - Tools"
+              }, {
+                "value": "a4SupplyChainTraining",
+                "label": "A4: Supply Chain - Training"
+              }],
+              "url": "",
+              "resource": "",
+              "custom": "",
+              "json": [{
+                "label": "Risk assessment",
+                "value": "risk-assessment"
+              }, {
+                "label": "Governance compliance",
+                "value": "governance-compliance"
+              }, {
+                "label": "Regulatory compliance",
+                "value": "regulatory-compliance"
+              }, {
+                "label": "Research",
+                "value": "research"
+              }]
+            },
+            "dataSrc": "values",
+            "valueProperty": "value",
+            "defaultValue": "",
+            "refreshOn": "",
+            "filter": "",
+            "authenticate": false,
+            "template": "<span>{{ item.label }}</span>",
+            "multiple": false,
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": false
+            },
+            "type": "select",
+            "inDataGrid": true,
+            "labelPosition": "top",
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {},
+            "customClass": "fixed-fayt"
+          }],
+          "tableView": true,
+          "label": "A: Managing Security Risk",
+          "key": "panel3DataGrid",
+          "protected": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "type": "datagrid",
+          "addAnotherPosition": "bottom",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "properties": {},
+          "hideLabel": true,
+          "validate": {
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "isNew": false
+        }, {
+          "autofocus": false,
+          "input": true,
+          "tree": true,
+          "components": [{
+            "autofocus": false,
+            "input": true,
+            "tableView": true,
+            "label": "B: Protecting Against Cyber Attack",
+            "key": "panel3DataGrid2ProtectingSystemsAgainstCyberAttack",
+            "placeholder": "",
+            "data": {
+              "values": [{
+                "value": "b1ServiceProtectionPoliciesAndProcessesConsultancy",
+                "label": "B1: Service Protection Policies and Processes - Consultancy"
+              }, {
+                "value": "b1ServiceProtectionPoliciesAndProcessesResearch",
+                "label": "B1: Service Protection Policies and Processes - Research"
+              }, {
+                "value": "b1ServiceProtectionPoliciesAndProcessesTraining",
+                "label": "B1: Service Protection Policies and Processes - Training"
+              }, {
+                "value": "b2IdentityAndAccessControlConsultancy",
+                "label": "B2: Identity and Access Control - Consultancy"
+              }, {
+                "value": "b2IdentityAndAccessControlResearch",
+                "label": "B2: Identity and Access Control - Research"
+              }, {
+                "value": "b2IdentityAndAccessControlTools",
+                "label": "B2: Identity and Access Control - Tools"
+              }, {
+                "value": "b2IdentityAndAccessControlTraining",
+                "label": "B2: Identity and Access Control - Training"
+              }, {
+                "value": "b3DataSecurityConsultancy",
+                "label": "B3: Data Security - Consultancy"
+              }, {
+                "value": "b3DataSecurityResearch",
+                "label": "B3: Data Security - Research"
+              }, {
+                "value": "b3DataSecurityTools",
+                "label": "B3: Data Security - Tools"
+              }, {
+                "value": "b3DataSecurityTraining",
+                "label": "B3: Data Security - Training"
+              }, {
+                "value": "b4SystemSecurityConsultancy",
+                "label": "B4: System Security - Consultancy"
+              }, {
+                "value": "b4SystemSecurityResearch",
+                "label": "B4: System Security - Research"
+              }, {
+                "value": "b4SystemSecurityTools",
+                "label": "B4: System Security - Tools"
+              }, {
+                "value": "b4SystemSecurityTraining",
+                "label": "B4: System Security - Training"
+              }, {
+                "value": "b5ResilientNetworksAndSystemsConsultancy",
+                "label": "B5: Resilient Networks and Systems - Consultancy"
+              }, {
+                "value": "b5ResilientNetworksAndSystemsResearch",
+                "label": "B5: Resilient Networks and Systems - Research"
+              }, {
+                "value": "b5ResilientNetworksAndSystemsTools",
+                "label": "B5: Resilient Networks and Systems - Tools"
+              }, {
+                "value": "b5ResilientNetworksAndSystemsTraining",
+                "label": "B5: Resilient Networks and Systems - Training"
+              }, {
+                "value": "b6StaffAwarenessAndTrainingConsultancy",
+                "label": "B6: Staff Awareness and Training - Consultancy"
+              }, {
+                "value": "b6StaffAwarenessAndTrainingFacilities",
+                "label": "B6: Staff Awareness and Training - Facilities"
+              }, {
+                "value": "b6StaffAwarenessAndTrainingResearch",
+                "label": "B6: Staff Awareness and Training - Research"
+              }, {
+                "value": "b6StaffAwarenessAndTrainingTools",
+                "label": "B6: Staff Awareness and Training - Tools"
+              }, {
+                "value": "b6StaffAwarenessAndTrainingTraining",
+                "label": "B6: Staff Awareness and Training - Training"
+              }],
+              "json": [{
+                "label": "Email security",
+                "value": "email-security"
+              }, {
+                "label": "Communications security",
+                "value": "communications-security"
+              }, {
+                "label": "Secure real time communications",
+                "value": "secure-real-time-communications"
+              }, {
+                "label": "Network security",
+                "value": "network-security"
+              }, {
+                "label": "Virtual Private Network",
+                "value": "virtual-private-network"
+              }, {
+                "label": "IPSec security gateway",
+                "value": "ipsec-security-gateway"
+              }, {
+                "label": "Telecommunications",
+                "value": "telecommunications"
+              }, {
+                "label": "Disk encryption",
+                "value": "disk-encryption"
+              }, {
+                "label": "Data encryption",
+                "value": "data-encryption"
+              }, {
+                "label": "Data at rest encryption",
+                "value": "data-at-rest-encryption"
+              }, {
+                "label": "Email encryption",
+                "value": "email-encryption"
+              }, {
+                "label": "PKI Security",
+                "value": "pki-security"
+              }, {
+                "label": "Remote desktop",
+                "value": "remote-desktop"
+              }, {
+                "label": "Mobile device management",
+                "value": "mobile-device-management"
+              }, {
+                "label": "Device security",
+                "value": "device-security"
+              }, {
+                "label": "Sanitisation services",
+                "value": "sanitisation-services"
+              }, {
+                "label": "Sanitisation products",
+                "value": "sanitisation-products"
+              }, {
+                "label": "Public awareness",
+                "value": "public-awareness"
+              }, {
+                "label": "Human factors",
+                "value": "human-factors"
+              }, {
+                "label": "Corporate awareness",
+                "value": "corporate-awareness"
+              }, {
+                "label": "Incident response training",
+                "value": "incident-response-training"
+              }, {
+                "label": "Cyber exercise services",
+                "value": "cyber-exercise-services"
+              }, {
+                "label": "Cyber range exercising",
+                "value": "cyber-range-exercising"
+              }, {
+                "label": "Penetration testing",
+                "value": "penetration-testing"
+              }, {
+                "label": "Industrial Control System testbed",
+                "value": "industrial-control-system-testbed"
+              }, {
+                "label": "TEMPEST & Electromagnetic Security (EMC)",
+                "value": "tempest-&-electromagnetic-security-(emc)"
+              }, {
+                "label": "TEMPEST product vendor",
+                "value": "tempest-product-vendor"
+              }, {
+                "label": "Secure hosting",
+                "value": "secure-hosting"
+              }, {
+                "label": "Web security",
+                "value": "web-security"
+              }, {
+                "label": "Virtual security architecture & assessment",
+                "value": "virtual-security-architecture-&-assessment"
+              }, {
+                "label": "DDoS protection",
+                "value": "ddos-protection"
+              }, {
+                "label": "Security engineering",
+                "value": "security-engineering"
+              }, {
+                "label": "Software execution control",
+                "value": "software-execution-control"
+              }, {
+                "label": "Network hardening",
+                "value": "network-hardening"
+              }, {
+                "label": "Penetration testing",
+                "value": "penetration-testing"
+              }, {
+                "label": "IPSec VPN client",
+                "value": "ipsec-vpn-client"
+              }, {
+                "label": "Airwave",
+                "value": "airwave"
+              }, {
+                "label": "Access control devices & systems",
+                "value": "access-control-devices-&-systems"
+              }, {
+                "label": "Cloud security",
+                "value": "cloud-security"
+              }, {
+                "label": "Security Operations Centre (SOC) consulting",
+                "value": "security-operations-centre-(soc)-consulting"
+              }, {
+                "label": "Firewall",
+                "value": "firewall"
+              }],
+              "url": "",
+              "resource": "",
+              "custom": ""
+            },
+            "dataSrc": "values",
+            "valueProperty": "value",
+            "defaultValue": "",
+            "refreshOn": "",
+            "filter": "",
+            "authenticate": false,
+            "template": "<span>{{ item.label }}</span>",
+            "multiple": false,
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": false
+            },
+            "type": "select",
+            "inDataGrid": true,
+            "labelPosition": "top",
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {},
+            "customClass": "fixed-fayt"
+          }],
+          "tableView": true,
+          "label": "Protecting Systems Against Cyber Attack",
+          "key": "panel3DataGrid2",
+          "protected": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "type": "datagrid",
+          "addAnotherPosition": "bottom",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "properties": {},
+          "hideLabel": true,
+          "validate": {
+            "maxLength": 100,
+            "customMessage": "",
+            "minLength": 1
+          }
+        }, {
+          "autofocus": false,
+          "input": true,
+          "tree": true,
+          "components": [{
+            "autofocus": false,
+            "input": true,
+            "tableView": true,
+            "label": "C: Detecting Cyber Security Events",
+            "key": "panel3DataGrid3DetectingCyberSecuritythreats",
+            "placeholder": "",
+            "data": {
+              "values": [{
+                "value": "c1SecurityMonitoringConsultancy",
+                "label": "C1: Security Monitoring - Consultancy"
+              }, {
+                "value": "c1SecurityMonitoringResearch",
+                "label": "C1: Security Monitoring - Research"
+              }, {
+                "value": "c1SecurityMonitoringTools",
+                "label": "C1: Security Monitoring - Tools"
+              }, {
+                "value": "c1SecurityMonitoringTraining",
+                "label": "C1: Security Monitoring - Training"
+              }, {
+                "value": "c2ProactiveSecurityEventDiscoveryConsultancy",
+                "label": "C2: Proactive Security Event Discovery - Consultancy"
+              }, {
+                "value": "c2ProactiveSecurityEventDiscoveryResearch",
+                "label": "C2: Proactive Security Event Discovery - Research"
+              }, {
+                "value": "c2ProactiveSecurityEventDiscoveryTools",
+                "label": "C2: Proactive Security Event Discovery - Tools"
+              }, {
+                "value": "c2ProactiveSecurityEventDiscoveryTraining",
+                "label": "C2: Proactive Security Event Discovery - Training"
+              }],
+              "json": [{
+                "label": "Cyber intelligence analysis",
+                "value": "cyber-intelligence-analysis"
+              }, {
+                "label": "Network analysis",
+                "value": "network-analysis"
+              }, {
+                "label": "Cyber threat intelligence",
+                "value": "cyber-threat-intelligence"
+              }, {
+                "label": "Threat vulnerability",
+                "value": "threat-vulnerability"
+              }, {
+                "label": "Cyber defence analysis",
+                "value": "cyber-defence-analysis"
+              }, {
+                "label": "eDiscovery",
+                "value": "ediscovery"
+              }],
+              "url": "",
+              "resource": "",
+              "custom": ""
+            },
+            "dataSrc": "values",
+            "valueProperty": "value",
+            "defaultValue": "",
+            "refreshOn": "",
+            "filter": "",
+            "authenticate": false,
+            "template": "<span>{{ item.label }}</span>",
+            "multiple": false,
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": false
+            },
+            "type": "select",
+            "inDataGrid": true,
+            "labelPosition": "top",
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {},
+            "customClass": "fixed-fayt"
+          }],
+          "tableView": true,
+          "label": "Detecting Cyber Security threats",
+          "key": "panel3DataGrid3",
+          "protected": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "type": "datagrid",
+          "addAnotherPosition": "bottom",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "properties": {},
+          "hideLabel": true,
+          "validate": {
+            "maxLength": 100,
+            "minLength": 1
+          }
+        }, {
+          "autofocus": false,
+          "input": true,
+          "tree": true,
+          "components": [{
+            "autofocus": false,
+            "input": true,
+            "tableView": true,
+            "label": "D: Minimising the Impact of Cyber Security Incidents",
+            "key": "panel3DataGrid4Minimisingtheimpactofcybersecurityincidents",
+            "placeholder": "",
+            "data": {
+              "values": [{
+                "value": "d1ResponseAndRecoveryPlanningConsultancy",
+                "label": "D1: Response and Recovery Planning - Consultancy"
+              }, {
+                "value": "d1ResponseAndRecoveryPlanningFacilities",
+                "label": "D1: Response and Recovery Planning - Facilities"
+              }, {
+                "value": "d1ResponseAndRecoveryPlanningResearch",
+                "label": "D1: Response and Recovery Planning - Research"
+              }, {
+                "value": "d1ResponseAndRecoveryPlanningTools",
+                "label": "D1: Response and Recovery Planning - Tools"
+              }, {
+                "value": "d1ResponseAndRecoveryPlanningTraining",
+                "label": "D1: Response and Recovery Planning - Training"
+              }, {
+                "value": "d2LessonsLearnedConsultancy",
+                "label": "D2: Lessons Learned - Consultancy"
+              }, {
+                "value": "d2LessonsLearnedResearch",
+                "label": "D2: Lessons Learned - Research"
+              }, {
+                "value": "d2LessonsLearnedTraining",
+                "label": "D2: Lessons Learned - Training"
+              }],
+              "json": [{
+                "label": "Fraud identification",
+                "value": "fraud-identification"
+              }, {
+                "label": "Cyber Incidents",
+                "value": "cyber-incidents"
+              }, {
+                "label": "Cyber Security Consultancy",
+                "value": "cyber-security-consultancy"
+              }, {
+                "label": "Tailored evaluation",
+                "value": "tailored-evaluation"
+              }, {
+                "label": "Attack analysis",
+                "value": "attack-analysis"
+              }, {
+                "label": "Forensics",
+                "value": "forensics"
+              }, {
+                "label": "Cyber security operations",
+                "value": "cyber-security-operations"
+              }, {
+                "label": "Malware investigation",
+                "value": "malware-investigation"
+              }, {
+                "label": "Capability development",
+                "value": "capability-development"
+              }, {
+                "label": "Secure code reviews",
+                "value": "secure-code-reviews"
+              }, {
+                "label": "Cyber exercise services",
+                "value": "cyber-exercise-services"
+              }, {
+                "label": "Cyber range exercising",
+                "value": "cyber-range-exercising"
+              }, {
+                "label": "Penetration testing",
+                "value": "penetration-testing"
+              }, {
+                "label": "Industrial Control System testbed",
+                "value": "industrial-control-system-testbed"
+              }, {
+                "label": "TEMPEST & Electromagnetic Security (EMC)",
+                "value": "tempest-&-electromagnetic-security-(emc)"
+              }, {
+                "label": "TEMPEST product vendor",
+                "value": "tempest-product-vendor"
+              }],
+              "url": "",
+              "resource": "",
+              "custom": ""
+            },
+            "dataSrc": "values",
+            "valueProperty": "value",
+            "defaultValue": "",
+            "refreshOn": "",
+            "filter": "",
+            "authenticate": false,
+            "template": "<span>{{ item.label }}</span>",
+            "multiple": false,
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": false
+            },
+            "type": "select",
+            "inDataGrid": true,
+            "labelPosition": "top",
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {},
+            "customClass": "fixed-fayt"
+          }],
+          "tableView": true,
+          "label": "Minimising the impact of cyber security incidents",
+          "key": "panel3DataGrid4",
+          "protected": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "type": "datagrid",
+          "addAnotherPosition": "bottom",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "properties": {},
+          "validate": {
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "hideLabel": true
+        }, {
+          "key": "panel3Content",
+          "label": "Content",
+          "input": false,
+          "tag": "div",
+          "attrs": [{
+            "value": "alert",
+            "attr": "role"
+          }],
+          "className": "alert alert-info",
+          "content": "Please use this area to input any type of offering you believe cannot be captured in the above list. Please associate your offering type using the most relevant NIS Objective where possible: e.g. A2: Risk Management - <my product type>. This box is to be used to capture a type of offering, so please keep the description of a similarly high level to ‘consultancy’, ‘tool’, ‘training’, ‘research’ or ‘facilities’.",
+          "type": "htmlelement",
+          "hideLabel": true,
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "properties": {}
+        }, {
+          "autofocus": false,
+          "input": true,
+          "tree": true,
+          "components": [{
+            "autofocus": false,
+            "input": true,
+            "tableView": true,
+            "inputType": "text",
+            "inputMask": "",
+            "label": "Additional Products and Services",
+            "key": "panel3AdditionalProductsandServicesAdditionalProductsandServices",
+            "placeholder": "",
+            "prefix": "",
+            "suffix": "",
+            "multiple": false,
+            "defaultValue": "",
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "spellcheck": true,
+            "validate": {
+              "required": false,
+              "minLength": "",
+              "maxLength": "",
+              "pattern": "",
+              "custom": "",
+              "customPrivate": false
+            },
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "type": "textfield",
+            "inDataGrid": true,
+            "labelPosition": "top",
+            "tags": [],
+            "properties": {},
+            "tooltip": "",
+            "description": "",
+            "customClass": "fixed-fayt"
+          }],
+          "tableView": true,
+          "label": "Additional Products and Services",
+          "key": "panel3AdditionalProductsandServices",
+          "protected": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "type": "datagrid",
+          "addAnotherPosition": "bottom",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "properties": {},
+          "hideLabel": true,
+          "tooltip": "",
+          "condensed": true
+        }],
+        "type": "panel",
+        "breadcrumb": "default",
+        "hideLabel": true,
+        "tags": [],
         "conditional": {
           "show": "",
           "when": null,
           "eq": ""
         },
-        "type": "textfield",
-        "inDataGrid": true,
-        "labelPosition": "top",
-        "tags": [],
         "properties": {},
-        "tooltip": "",
-        "description": "",
-        "customClass": "fixed-fayt"
-      }],
-      "tableView": true,
-      "label": "Additional Products and Services",
-      "key": "panel3AdditionalProductsandServices",
-      "protected": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "type": "datagrid",
-      "addAnotherPosition": "bottom",
-      "tags": [],
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "properties": {},
-      "hideLabel": true,
-      "tooltip": "",
-      "condensed": true
-    }],
-    "type": "panel",
-    "breadcrumb": "default",
-    "hideLabel": true,
-    "tags": [],
-    "conditional": {
-      "show": "",
-      "when": null,
-      "eq": ""
-    },
-    "properties": {},
-    "label": "panel3"
-  }, {
-    "clearOnHide": false,
-    "key": "panel4",
-    "input": false,
-    "title": "Organisation Contacts",
-    "theme": "default",
-    "tableView": false,
-    "components": [{
-      "autofocus": false,
-      "input": true,
-      "tree": true,
-      "components": [{
-        "autofocus": false,
-        "input": true,
-        "tableView": true,
-        "inputType": "text",
-        "inputMask": "",
-        "label": "Title/Role",
-        "key": "organisationContactsTitleRole",
-        "placeholder": "",
-        "prefix": "",
-        "suffix": "",
-        "multiple": false,
-        "defaultValue": "",
-        "protected": false,
-        "unique": false,
-        "persistent": true,
-        "hidden": false,
-        "clearOnHide": true,
-        "spellcheck": true,
-        "validate": {
-          "required": false,
-          "minLength": "",
-          "maxLength": "",
-          "pattern": "",
-          "custom": "",
-          "customPrivate": false
-        },
+        "label": "panel3"
+      }, {
+        "clearOnHide": false,
+        "key": "panel4",
+        "input": false,
+        "title": "Organisation Contacts",
+        "theme": "default",
+        "tableView": false,
+        "components": [{
+          "autofocus": false,
+          "input": true,
+          "tree": true,
+          "components": [{
+            "autofocus": false,
+            "input": true,
+            "tableView": true,
+            "inputType": "text",
+            "inputMask": "",
+            "label": "Title/Role",
+            "key": "organisationContactsTitleRole",
+            "placeholder": "",
+            "prefix": "",
+            "suffix": "",
+            "multiple": false,
+            "defaultValue": "",
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "spellcheck": true,
+            "validate": {
+              "required": false,
+              "minLength": "",
+              "maxLength": "",
+              "pattern": "",
+              "custom": "",
+              "customPrivate": false
+            },
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "type": "textfield",
+            "inDataGrid": true,
+            "labelPosition": "top",
+            "tags": [],
+            "properties": {},
+            "customClass": "maybe-inline"
+          }, {
+            "autofocus": false,
+            "input": true,
+            "tableView": true,
+            "inputType": "text",
+            "inputMask": "",
+            "label": "Name",
+            "key": "organisationContactsName",
+            "placeholder": "",
+            "prefix": "",
+            "suffix": "",
+            "multiple": false,
+            "defaultValue": "",
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "spellcheck": true,
+            "validate": {
+              "required": false,
+              "minLength": "",
+              "maxLength": "",
+              "pattern": "",
+              "custom": "",
+              "customPrivate": false
+            },
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "type": "textfield",
+            "inDataGrid": true,
+            "labelPosition": "top",
+            "tags": [],
+            "properties": {},
+            "customClass": "maybe-inline"
+          }, {
+            "autofocus": false,
+            "input": true,
+            "tableView": true,
+            "inputType": "text",
+            "inputMask": "",
+            "label": "Email",
+            "key": "organisationContactsEmail",
+            "placeholder": "",
+            "prefix": "",
+            "suffix": "",
+            "multiple": false,
+            "defaultValue": "",
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "spellcheck": true,
+            "validate": {
+              "required": false,
+              "minLength": "",
+              "maxLength": "",
+              "pattern": "",
+              "custom": "",
+              "customPrivate": false
+            },
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "type": "textfield",
+            "inDataGrid": true,
+            "labelPosition": "top",
+            "tags": [],
+            "properties": {},
+            "customClass": "maybe-inline"
+          }, {
+            "autofocus": false,
+            "input": true,
+            "tableView": true,
+            "inputType": "tel",
+            "inputMask": "",
+            "label": "Contact Number",
+            "key": "organisationContactsContactNumber",
+            "placeholder": "",
+            "prefix": "",
+            "suffix": "",
+            "multiple": false,
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "defaultValue": "",
+            "clearOnHide": true,
+            "validate": {
+              "required": false
+            },
+            "type": "phoneNumber",
+            "inDataGrid": true,
+            "labelPosition": "top",
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {},
+            "customClass": "maybe-inline"
+          }],
+          "tableView": true,
+          "label": "Organisation Contacts",
+          "key": "organisationContacts",
+          "protected": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "type": "datagrid",
+          "addAnotherPosition": "bottom",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "properties": {},
+          "hideLabel": true,
+          "customClass": "",
+          "validate": {
+            "minLength": 1,
+            "maxLength": 5
+          }
+        }, {
+          "autofocus": false,
+          "input": true,
+          "tableView": true,
+          "label": "Please tick the following boxes:",
+          "key": "panel4Pleasetickthefollowingboxes",
+          "values": [{
+            "value": "iHaveReadTheCniMarketplaceTermsAndConditionsTCsAndAgreeWithTheseTCs",
+            "label": "I have read the CNI Marketplace Terms and Conditions (T&Cs) and agree with these T&Cs.",
+            "shortcut": ""
+          }, {
+            "value": "iConfirmTheInformationIHaveProvidedWithinThisFormIsAccurateAndATrueRepresentationOfMyCompany",
+            "label": "I confirm the information I have provided within this form is accurate and a true representation of my company.",
+            "shortcut": ""
+          }],
+          "inline": false,
+          "protected": false,
+          "persistent": true,
+          "hidden": false,
+          "clearOnHide": true,
+          "validate": {
+            "required": true
+          },
+          "type": "selectboxes",
+          "labelPosition": "top",
+          "optionsLabelPosition": "left",
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "labelWidth": 30,
+          "labelMargin": 3
+        }],
+        "type": "panel",
+        "breadcrumb": "default",
+        "hideLabel": true,
+        "tags": [],
         "conditional": {
           "show": "",
           "when": null,
           "eq": ""
         },
-        "type": "textfield",
-        "inDataGrid": true,
-        "labelPosition": "top",
-        "tags": [],
         "properties": {},
-        "customClass": "maybe-inline"
+        "label": "panel4"
       }, {
         "autofocus": false,
         "input": true,
-        "tableView": true,
-        "inputType": "text",
-        "inputMask": "",
-        "label": "Name",
-        "key": "organisationContactsName",
-        "placeholder": "",
-        "prefix": "",
-        "suffix": "",
-        "multiple": false,
-        "defaultValue": "",
-        "protected": false,
-        "unique": false,
-        "persistent": true,
-        "hidden": false,
-        "clearOnHide": true,
-        "spellcheck": true,
-        "validate": {
-          "required": false,
-          "minLength": "",
-          "maxLength": "",
-          "pattern": "",
-          "custom": "",
-          "customPrivate": false
-        },
-        "conditional": {
-          "show": "",
-          "when": null,
-          "eq": ""
-        },
-        "type": "textfield",
-        "inDataGrid": true,
-        "labelPosition": "top",
-        "tags": [],
-        "properties": {},
-        "customClass": "maybe-inline"
-      }, {
-        "autofocus": false,
-        "input": true,
-        "tableView": true,
-        "inputType": "text",
-        "inputMask": "",
-        "label": "Email",
-        "key": "organisationContactsEmail",
-        "placeholder": "",
-        "prefix": "",
-        "suffix": "",
-        "multiple": false,
-        "defaultValue": "",
-        "protected": false,
-        "unique": false,
-        "persistent": true,
-        "hidden": false,
-        "clearOnHide": true,
-        "spellcheck": true,
-        "validate": {
-          "required": false,
-          "minLength": "",
-          "maxLength": "",
-          "pattern": "",
-          "custom": "",
-          "customPrivate": false
-        },
-        "conditional": {
-          "show": "",
-          "when": null,
-          "eq": ""
-        },
-        "type": "textfield",
-        "inDataGrid": true,
-        "labelPosition": "top",
-        "tags": [],
-        "properties": {},
-        "customClass": "maybe-inline"
-      }, {
-        "autofocus": false,
-        "input": true,
-        "tableView": true,
-        "inputType": "tel",
-        "inputMask": "",
-        "label": "Contact Number",
-        "key": "organisationContactsContactNumber",
-        "placeholder": "",
-        "prefix": "",
-        "suffix": "",
-        "multiple": false,
-        "protected": false,
-        "unique": false,
-        "persistent": true,
-        "hidden": false,
-        "defaultValue": "",
-        "clearOnHide": true,
-        "validate": {
-          "required": false
-        },
-        "type": "phoneNumber",
-        "inDataGrid": true,
-        "labelPosition": "top",
-        "tags": [],
-        "conditional": {
-          "show": "",
-          "when": null,
-          "eq": ""
-        },
-        "properties": {},
-        "customClass": "maybe-inline"
+        "label": "Submit",
+        "tableView": false,
+        "key": "submit",
+        "size": "md",
+        "leftIcon": "",
+        "rightIcon": "",
+        "block": false,
+        "action": "submit",
+        "disableOnInvalid": false,
+        "theme": "primary",
+        "type": "button"
       }],
-      "tableView": true,
-      "label": "Organisation Contacts",
-      "key": "organisationContacts",
-      "protected": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "type": "datagrid",
-      "addAnotherPosition": "bottom",
-      "tags": [],
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "properties": {},
-      "hideLabel": true,
-      "customClass": "",
-      "validate": {
-        "minLength": 1,
-        "maxLength": 5
-      }
-    }, {
-      "autofocus": false,
-      "input": true,
-      "tableView": true,
-      "label": "Please tick the following boxes:",
-      "key": "panel4Pleasetickthefollowingboxes",
-      "values": [{
-        "value": "iHaveReadTheCniMarketplaceTermsAndConditionsTCsAndAgreeWithTheseTCs",
-        "label": "I have read the CNI Marketplace Terms and Conditions (T&Cs) and agree with these T&Cs.",
-        "shortcut": ""
+      "display": "form",
+      "submissionAccess": [{
+        "roles": [],
+        "type": "create_all"
       }, {
-        "value": "iConfirmTheInformationIHaveProvidedWithinThisFormIsAccurateAndATrueRepresentationOfMyCompany",
-        "label": "I confirm the information I have provided within this form is accurate and a true representation of my company.",
-        "shortcut": ""
+        "roles": ["administrator", "authenticated"],
+        "type": "read_all"
+      }, {
+        "roles": ["administrator"],
+        "type": "update_all"
+      }, {
+        "roles": ["administrator"],
+        "type": "delete_all"
+      }, {
+        "roles": ["authenticated", "anonymous"],
+        "type": "create_own"
+      }, {
+        "roles": ["authenticated"],
+        "type": "read_own"
+      }, {
+        "roles": ["authenticated"],
+        "type": "update_own"
+      }, {
+        "roles": ["authenticated"],
+        "type": "delete_own"
       }],
-      "inline": false,
-      "protected": false,
-      "persistent": true,
-      "hidden": false,
-      "clearOnHide": true,
-      "validate": {
-        "required": true
-      },
-      "type": "selectboxes",
-      "labelPosition": "top",
-      "optionsLabelPosition": "left",
-      "conditional": {
-        "show": "",
-        "when": null,
-        "eq": ""
-      },
-      "labelWidth": 30,
-      "labelMargin": 3
-    }],
-    "type": "panel",
-    "breadcrumb": "default",
-    "hideLabel": true,
-    "tags": [],
-    "conditional": {
-      "show": "",
-      "when": null,
-      "eq": ""
-    },
-    "properties": {},
-    "label": "panel4"
-  }, {
-    "autofocus": false,
-    "input": true,
-    "label": "Submit",
-    "tableView": false,
-    "key": "submit",
-    "size": "md",
-    "leftIcon": "",
-    "rightIcon": "",
-    "block": false,
-    "action": "submit",
-    "disableOnInvalid": false,
-    "theme": "primary",
-    "type": "button"
-  }],
-  "display": "form",
-  "submissionAccess": [{
-    "roles": [],
-    "type": "create_all"
-  }, {
-    "roles": ["administrator", "authenticated"],
-    "type": "read_all"
-  }, {
-    "roles": ["administrator"],
-    "type": "update_all"
-  }, {
-    "roles": ["administrator"],
-    "type": "delete_all"
-  }, {
-    "roles": ["authenticated", "anonymous"],
-    "type": "create_own"
-  }, {
-    "roles": ["authenticated"],
-    "type": "read_own"
-  }, {
-    "roles": ["authenticated"],
-    "type": "update_own"
-  }, {
-    "roles": ["authenticated"],
-    "type": "delete_own"
-  }],
-  "title": "CNI Supplier",
-  "name": "cniSupplier",
-  "path": "cnisupplier",
-  "access": [{
-    "roles": ["administrator", "authenticated", "anonymous"],
-    "type": "read_all"
-  }]
-},
+      "title": "CNI Supplier",
+      "name": "cniSupplier",
+      "path": "cnisupplier",
+      "access": [{
+        "roles": ["administrator", "authenticated", "anonymous"],
+        "type": "read_all"
+      }]
+    }
+  },
   "actions": {
     "userSave": {
       "title": "Save Submission",
@@ -1991,5 +1992,4 @@
       ]
     }
   }
-}
 }
