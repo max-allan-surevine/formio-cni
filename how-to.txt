@@ -1,26 +1,6 @@
-find the forms you need (the last 4)
-db.forms.find({},{type:1 , machineName:1})
-{ "_id" : ObjectId("5ace12b5d55f457530274d94"), "type" : "resource", "machineName" : "user" }
-{ "_id" : ObjectId("5ace12b5d55f457530274d95"), "type" : "resource", "machineName" : "admin" }
-{ "_id" : ObjectId("5ace12b5d55f457530274d96"), "type" : "form", "machineName" : "userLogin" }
-{ "_id" : ObjectId("5ace12b5d55f457530274d97"), "type" : "form", "machineName" : "userRegister" }
-{ "_id" : ObjectId("5ace17251f5c2c76c6ffa483"), "type" : "form", "machineName" : "foo" }
-{ "_id" : ObjectId("5acf34873b34fb03d325bf51"), "type" : "form", "machineName" : "cniSupplier" }
-{ "_id" : ObjectId("5b30b0a66ec6330d0950b8e6"), "type" : "resource", "machineName" : "memberRegistrationForm" }
-{ "_id" : ObjectId("5b30b2116ec6330d0950b8e8"), "type" : "resource", "machineName" : "memberOrg" }
-{ "_id" : ObjectId("5b30b2d66ec6330d0950b8ea"), "type" : "form", "machineName" : "memberRegistrationForm1" }
+find the form you need (the last 4)
 
-Query with just the id and name to check your query!
-
-db.forms.find({_id: { $in: [ObjectId("5b30b2d66ec6330d0950b8ea"), ObjectId("5b30b2116ec6330d0950b8e8"), ObjectId("5b30b0a66ec6330d0950b8e6"), ObjectId("5acf34873b34fb03d325bf51")]} },{_id:1, machineName:1})
-{ "_id" : ObjectId("5acf34873b34fb03d325bf51"), "machineName" : "cniSupplier" }
-{ "_id" : ObjectId("5b30b0a66ec6330d0950b8e6"), "machineName" : "memberRegistrationForm" }
-{ "_id" : ObjectId("5b30b2116ec6330d0950b8e8"), "machineName" : "memberOrg" }
-{ "_id" : ObjectId("5b30b2d66ec6330d0950b8ea"), "machineName" : "memberRegistrationForm1" }
-
-Dump them :
-
-db.forms.find({_id: { $in: [ObjectId("5b30b2d66ec6330d0950b8ea"), ObjectId("5b30b2116ec6330d0950b8e8"), ObjectId("5b30b0a66ec6330d0950b8e6"), ObjectId("5acf34873b34fb03d325bf51")]} } , {created:0, modified:0, machineName:0, __v:0, _id:0})
+> db.forms.find({"name":"cniSupplier"}, {created:0, modified:0, machineName:0, __v:0, _id:0})
 
 Copy/paste the result to somewhere you can prettify the JSON for your sanity.
 
@@ -43,11 +23,8 @@ Replace the owner with null
 "owner": ObjectId("5ace12bfd55f457530274d9f"),
 to :
 "owner": null,
-(should be 4 of them)
 
 Put a few lines of space between each item (it may end the item with "} {" on a line, which if you collapse the section in Atom, you miss the first {  so can't collapse the next section....)
-
-Make sure you have the 2 forms together and the 2 resources together.
 
 Remove all the "source" lines (with proper JSON)
 Use Regex and replace with nothing : ,\n\s*"source".*
@@ -55,38 +32,12 @@ Use Regex and replace with nothing : ,\n\s*"source".*
 Look at the "todo" application's dist/project.json
 Change the first few lines as appropriate.
 
-Scroll down to the "forms" section and after the userLogin form, add the 2 forms from your scratch pad. (beware JSON syntax)
+Scroll down to the "forms" section and after the userLogin form, add the form from your scratch pad. (beware JSON syntax)
 
 Then actions :
 Remove todoSave and add :
 
-"memberOrg:save": {
-  "title": "Save Submission",
-  "name": "save",
-  "form": "memberOrg",
-  "handler": ["before"],
-  "method": ["create", "update"],
-  "priority": 10,
-  "settings": {}
-},
-"member:save": {
-  "title": "Save Submission",
-  "name": "save",
-  "form": "member",
-  "handler": ["before"],
-  "method": ["create", "update"],
-  "priority": 10,
-  "settings": {}
-},
-"memberRegistrationForm:save": {
-  "title": "Save Submission",
-  "name": "save",
-  "form": "memberRegistrationForm",
-  "handler": ["before"],
-  "method": ["create", "update"],
-  "priority": 10,
-  "settings": {}
-},
+
 "cniSupplier:save": {
   "title": "Save Submission",
   "name": "save",
@@ -95,18 +46,13 @@ Remove todoSave and add :
   "method": ["create", "update"],
   "priority": 10,
   "settings": {}
-},
+}
 
 
 Finally : resources section.
 Remove the todo resource.
-Copy/paste the member and memberOrg resources into it's place.
 
-
-
-### This last bit doesn't really work due to my lack of understanding of wtf angular is doing!
-### It does create the forms/resources almost correctly in form.io
-### (Some of the multi-select stuff isn't working, I suspect when I removed the "source"... bits, that was wrong)
+### Making the html app work - slightly
 Now : src/config.js
 Change all occurences of todo or Todo to CniSupplier
 You will also need to add paths for each form :
@@ -140,3 +86,11 @@ angular.module('formioAppCniSupplier').constant('AppConfig', {
 And the same CniSupplier change in index.html
 
 It _should_ build a new version of the content in dist, correctly from these changes...
+
+Doesn't work very well...
+Add a simple index.html page with :
+
+<script src="https://unpkg.com/formiojs@latest/dist/formio.embed.js?src=http://10.66.2.156:3001/cnisupplier"></script>
+(replace that IP address with your address)
+
+And it should render a very bare version of the form.
