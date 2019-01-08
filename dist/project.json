@@ -249,7 +249,7 @@
             }
           ],
           "className": "",
-          "content": "<p>User details (this much be the individual completing this form)",
+          "content": "<p>User details (this must be the individual completing this form)",
           "type": "htmlelement",
           "hideLabel": true,
           "tags": [],
